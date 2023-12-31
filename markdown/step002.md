@@ -32,9 +32,46 @@ git commit -m "merge"
 git push origin main
 ```
 
+
 'merge'는 단순히 표기한 메세지 이다. 그리고 평소와 같게 다시 올려주면 된다.
 
 
-## 
+# 폰트 설정 방법
+아 잘바구니 기능이랑 게시물 기능 담으면 싯팔 생각보다 규모가 더 크네.
+장례식장인데,,,,
 
+## 반응형 앱 Dom과 js 형식울 위한 prettier
+```
+npm install react-router-dom axios
+npm install --save-dev prettier
+npx prettier --write "**/*.js"
+```
 
+이건 일단 패스,,,,가 아니라 알았다.
+myapp이 있으면 그 안에 만드는 구조였다.
+[참고](https://velog.io/@sisofiy626/React-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0) 내용에 보면 나온다.
+
+my-app
+├── node_modules
+├── public
+├── src
+├── .gitignore
+├── package.json
+└── README.md
+
+위 같은 구조가 되어야 한다. 정적파일은 public에 넣으면 된다. 그래서 제공된 폰트를 넣는다.
+그리고 src 디렉토리 내부 구조를 알아야 할 것 같다. 각 기능에 대해서는 [참고](https://velog.io/@sisofiy626/React-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0)를 확인하자.
+
+└─ src
+ ├─ components
+ ├─ assets 
+ ├─ hooks (= hoc)
+ ├─ pages
+ ├─ constants
+ ├─ config
+ ├─ styles
+ ├─ services (= api)
+ ├─ utils
+ ├─ contexts
+ ├─ App.js
+ └─ index.js
