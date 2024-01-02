@@ -1,3 +1,6 @@
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
 
 
 
@@ -15,8 +18,9 @@
   src: local('MyFont'), url(./fonts/SEBANG_Gothic.ttf) format('ttf');
 }
 
+/* ------------------------------------------------------------------------------------------------------------- */
 
-
+/* ------------------------------------------------------------------------------------------------------------- */
 
 /* 2401020120 아워홈 css 본격 모티브 */
 .wrap {
@@ -27,25 +31,6 @@
   padding-top: 160px !important;
   overflow: hidden
 }
-.itemList:after {
-  content: '';
-  display: block;
-  clear: both
-}
-.itemList > li {
-  position: relative;
-  float: left;
-  width: 286px;
-  margin: 30px 0 0 32px
-}
-.itemList > li:nth-child(4n-3) {
-  clear: left;
-  margin-left: 0
-}
-.itemList > li:nth-child(-n + 4) {
-  margin-top: 0
-}
-
 .mainBest .tabCategory ul li {
   line-height: 28px;
 }
@@ -62,22 +47,21 @@
   margin: 0 auto
 }
 
-/* 2401021918 등급 넘버 */
-ol.itemList>li:before{
-  content: counter(itemNum, decimal-leading-zero);
-  counter-increment: itemNum;
-  display: block;
-  margin-bottom: 10px;
-  color: #000;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1;
-
+/* 물건 정렬 */
+.itemList > li {
+  position: relative;
+  float: left;
+  /* 2401022130 정렬 가로길이 수정 286 -> 270 */
+  width: 270px;
+  margin: 30px 0 0 32px
 }
-:before, :after {
-  box-sizing: border-box;
+.itemList > li:nth-child(4n-3) {
+  clear: left;
+  margin-left: 0
 }
-
+.itemList > li:nth-child(-n + 4) {
+  margin-top: 0
+}
 
 
 /* 2401020120 사진 */
@@ -92,6 +76,44 @@ ol.itemList>li:before{
   border: 1px solid #eee;
   overflow: hidden
 }
+.thum img {
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+
+/* 2401021918 등급 넘버 */
+ol.itemList {
+  counter-reset: itemNum
+}
+ol.itemList>li:before{
+  content: counter(itemNum, decimal-leading-zero);
+  counter-increment: itemNum;
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  
+}
+ol.itemList .iHover {
+  top: 42px
+}
+.itemList:after {
+  content: '';
+  display: block;
+  clear: both
+}
+/* 2401022003 기본 숫자 출력 제거 */
+ul, ol {
+  list-style: none
+}
+
+
+
 
 /* 2401020120 본문 css */
 .itemList .cont {
@@ -163,6 +185,9 @@ ol.itemList>li:before{
 .txtOption .option.temp1 {
   color: #448ccb
 }
+.txtOption .option.temp3 {
+  color: #666
+}
 
 /* 2401020120 장바구니 */
 .itemList .iHover {
@@ -176,6 +201,8 @@ ol.itemList>li:before{
 .itemList .iHover button {
   display: inline-block;
   position: relative;
+  /* 2401022242 나타나는 장바구니 이미지에서 테두리 제거. */
+  border: none;
   width: 42px;
   height: 42px;
   margin: 0 2px;
@@ -196,3 +223,52 @@ ol.itemList>li:before{
 .itemList .iHover button.compare {
   background-position: 0 -84px
 }
+.itemList > li:hover .iHover button, .itemList > li.on .iHover button {
+  opacity: 1
+  
+}
+
+
+
+
+
+/*  */
+.itemListSlideWrap + .btnArea button {
+  min-width: 205px;
+  width: 205px;
+  height: 57px;
+  line-height: 57px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.itemListSlideWrap .itemList > li {
+  width: 175px;
+  margin: 0;
+}
+.itemListSlideWrap .itemList .cont .tit {
+  height: 50px;
+  font-size: 17px;
+  line-height: 25px;
+  color: #888;
+}
+.itemListSlideWrap .itemList .cart {
+  display: inline-block;
+  position: absolute;
+  top: 116px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  margin: 0 2px;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: url(../images/pc/ico_item_tool.png) 0 0 no-repeat;
+  z-index: 1
+}
+.itemListSlideWrap {
+  position: relative;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */

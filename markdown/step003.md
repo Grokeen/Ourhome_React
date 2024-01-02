@@ -21,3 +21,20 @@ let과 var 차이는 뭐였지?
 - Flux 패턴?
 - 코드분할?
 - TDD? 이건 뭐 계속 하는 거니까.
+
+
+# 반응형 웹?
+/* Base styles */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Styles for screens larger than 600px */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+이 예에서 본문 텍스트의 글꼴 크기는 600px보다 작은 화면에서는 16px이지만 너비가 600px 이상인 화면에서는 18px로 늘어난다.
