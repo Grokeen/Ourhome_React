@@ -39,6 +39,9 @@ git push origin main
 # 폰트 설정 방법
 아 잘바구니 기능이랑 게시물 기능 담으면 싯팔 생각보다 규모가 더 크네.
 장례식장인데,,,,
+[참고(영문)](https://stackoverflow.com/questions/41676054/how-to-add-fonts-to-create-react-app-based-projects)
+그니까 index.css에 추가하는 방식이다.
+
 
 ## 반응형 앱 Dom과 js 형식울 위한 prettier
 ```
@@ -75,3 +78,9 @@ my-app
  ├─ contexts
  ├─ App.js
  └─ index.js
+
+
+ # 리액트 구조,,,
+ [유튜브 참고](https://www.youtube.com/watch?v=nahwuaXmgt8)에 보면 그나마 구조에 대해 알기 쉬웠다.
+
+ 
