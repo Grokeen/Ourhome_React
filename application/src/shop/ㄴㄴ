@@ -1,0 +1,38 @@
+{arrayVal.map((Id, price, name) => (
+<tr>
+    <td className="itmTarget">
+        <a href="@">
+            <div className="thum">
+                <img src={Id} alt="" />
+            </div>
+            <div className="cont">
+                {/* 상품명 */}
+                <strong className="tit">{name}</strong>
+            </div>
+        </a>
+    </td>
+    <td className="tdPrice">
+        {/* 구매가 */}
+        <span className="cost1" title="판매가"><b>{price}</b>원</span>
+    </td>
+    <td>
+        {/* 수량 */}
+        <span className="frmAmount">
+            <button type="button" className="minus"
+                onmousedown="javascript:try{cartLog('S000000000610',-1, this);}catch(e){}">수량 감소</button>
+            <input type="text" title="수량 직접입력" name="qty"
+                onchange="javascript:try{cartQtyChangeLog('S000000000610',this.value);}catch(e){}" data-sell-mon="9450"
+                data-delivery-type="Y" data-each-delivery="N" value="1" data-delivery-amt="3000"
+                data-delivery-free="30000" data-delivery-gubun="O" className="numeric" data-jirisansoo-yn="N"
+                maxlength="5" />
+            <button type="button" className="plus"
+                onmousedown="javascript:try{cartLog('S000000000610',1, this);}catch(e){}">수량 증가</button>
+        </span>
+    </td>
+    <td className="tdPrice">
+        {/* 금액 */}
+        <span className="cost1" title="금액"><b>9,450</b>원</span>
+    </td>
+
+</tr>
+))}
