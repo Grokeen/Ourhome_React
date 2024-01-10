@@ -20,9 +20,9 @@ root.render(
   <BrowserRouter>
     {/* 헤더 설정 import 해서, 태그로 만들 수 있다. Switch는 각각 다르게 설정 가능하다. */}
     <Routes>
-      <Route path="/" element={<ItemList />} />
-      <Route path="barsketPage" element={<BarsketPage />} />
-    </Routes>
+  <Route path="/" element={<ItemList />} />
+  <Route path="barsketPage" element={<BarsketPage />} />
+</Routes>
 
   </BrowserRouter>
 );

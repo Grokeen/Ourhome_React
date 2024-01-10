@@ -1,70 +1,51 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+# 아워홈 사전과제
+## 받은 자료
+- ppt 예시
+- 과제관련 사진 2장
+- ppt ttf 파일 3개
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- ![과제관련 사진 1](./markdown/img/(참고) 웹개발_사전과제 이미지 화면1.png) -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="/markdown/img/(참고) 웹개발_사전과제 이미지 화면1.png" />
+<img src="/markdown/img/(참고) 웹개발_사전과제 이미지 화면2.png" />
 
-### `npm test`
+ppt 내용에는 React와 Javascript로 개발하라는 필수 조건이 있었다. 나는 Spring 개발자다. 약간 막막했지만, 지난 회사에서 개발할 때, JSP에서 function으로 바인딩하여 계산기를 개발한 경험이 있어서, 딱히 걱정은 없었다. 오히려 코테보다 쉽다고 생각했다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+첫 날에 간단하게 했던 구상은
+- 식품 정보를 가진 DB
+- 로그인/비로그인 데이터 저장 방식
+    로그인 시, 장바구니(DB)
+    비로그인 시, 장바구니(session)
+- 장바구니 페이지 자동 계산
+- (가능하다면)식품 상세 페이지
 
-### `npm run build`
+## 개발 기간 12월 29일 ~ 1월 3일
+총 개발 기간은 6일 정도 받았다. 저녁에 문자를 확인하고, 간단하게 구상한 뒤에 다음 날 본격적으로 개발할 계획이었다. 그러나 다음 날 새벽에 안타깝게도 할머니 부고 소식이 전해졌다. 장례식 장에서 3일간 머물면서, React와 Spring의 차이를 분석하고 Github에 빈 repository를 만들어서, 브라우저 용 VSCode에 연결하여 실습해보았다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="/markdown/img/Screenshot 2024-01-09 at 14.15.25.png" />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### React와 Spring 차이
+- 단방향 vs 양방향
+- Flux패턴 vs MVC 패턴
+- Dependentcy vs Route(상대경로 설정 방식)
+- 디렉토리 구조, JS 구조
+- 문법 차이
+- 개발 사례로 보는 결과물 비교
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 결과
+아래는 결과 화면이다.
+### 영상
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J8UeHf1kJFk?si=NhWpjKxsnQL9Z7GG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[유튜브 링크](https://www.youtube.com/watch?v=J8UeHf1kJFk)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 사진
+<img src="/markdown/img/Screenshot 2024-01-03 at 22.57.18.png" />
+<img src="/markdown/img/Screenshot 2024-01-03 at 22.57.09.png" />

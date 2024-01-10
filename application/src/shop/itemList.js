@@ -75,7 +75,7 @@ function App() {
 		<div className="wrap">
 
 			<div> 	
-				{/* <button onClick={restartTimer}>세션 지우기</button><br/>			 */}
+				<button onClick={restartTimer}>세션 지우기</button><br/>			
 			</div>
 			<section className="mainBest">
 				<div className="inner">
