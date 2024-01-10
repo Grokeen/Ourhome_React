@@ -58,10 +58,10 @@ session에 넣는 방식이다. operationType 이나 conditionFlag 같은 경우
 이 부분이 아쉬웠다. 상품을 하드코딩하였기 때문에 이렇게 가져오지만 실제로는 상품 ID 값 만 있으면, 나머지 정보는 DB에서 가져왔을 것이다.
 
 5. 
-<img src="/markdown/process/Screenshot 2024-01-03 at 23.24.48.png" style="height:60%" />
+<img src="/markdown/process/Screenshot 2024-01-03 at 23.33.57.png" style="height:60%" />
 특정 div 태그를 가려놓았다. 따라서 상품 장바구니를 선택 시, 화면이 보일 수 있게 해놓았다. Spring이었다면, JSTL에 none,block이나 JQuary에 hide, show를 사용했을 것이다. 그러나 JQuary를 import하고 문법을 사용해도 되는지 여부를 잘 모르겠어서, 최대한 인터넷에서 찾아서 적용하였다.
 
-<img src="/markdown/process/Screenshot 2024-01-03 at 23.24.48.png" style="height:60%" />
+<img src="/markdown/process/Screenshot 2024-01-03 at 23.34.17.png" style="height:60%" />
 이것은 5번의 가려논 jsx 화면이다.
 
 ## 결과
