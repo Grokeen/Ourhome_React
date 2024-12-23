@@ -1,6 +1,14 @@
 
 
 
+# 실행방법
+
+
+
+```linux
+npm run build
+npm start 
+```
 
 
 

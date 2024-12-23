@@ -80,7 +80,6 @@ my-app
  └─ index.js
 
 
- # 리액트 구조,,,
+ # 리액트 구조,,,뭐냐 뭐야
  [유튜브 참고](https://www.youtube.com/watch?v=nahwuaXmgt8)에 보면 그나마 구조에 대해 알기 쉬웠다.
 
- 

@@ -57,5 +57,16 @@ npx prettier --write "**/*.js
 ```
  node server.js
 ```
+씹 뭐지 안되는데?
 
 [참고2](https://study-with-ej.tistory.com/24)
+이걸 보다가 아무리 생각해도 이상해서 다시 찾아봤다.
+
+### 처음부터 다시
+디렉토리를 하나 만들고
+```
+cd 디렉토리명
+npx create-react-app .
+npm start
+```
+와 바로되네

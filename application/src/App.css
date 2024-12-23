@@ -628,3 +628,75 @@ td.tdPrice .cost1 {
   line-height:47px
 }
 
+
+/* 헤더 css */
+.header{position:absolute;top:0;left:0;width:100%;min-width:1280px;height:160px;border-bottom:1px solid #e6e6e6;background:#fff;z-index:9}
+.header.fixed{position:fixed}
+.headerArea{position:relative}
+.headerArea .inner{position:relative;padding:60px 0 20px}
+.headerArea h1{display:inline-block;margin-top:-3px;vertical-align:middle}
+
+.headerArea .headUtil{float:right;}
+.headerArea .headUtil .util{position: absolute;top:0;right:0;line-height:40px}
+.headerArea .headUtil .util li{display:inline-block;margin-left:12px;font-size:14px}
+
+
+
+.gnbArea{position:relative;border-top:1px solid #e6e6e6}
+.gnbArea .inner{position:relative}
+.gnbArea .menu{float:left;font-size:0; padding-left:200px;}
+.gnbArea .menu:after{content:'';display:block;clear:both;}
+.gnbArea .menu li{display:inline-block;margin-left:100px;color:#000;font-size:20px;font-weight:600;line-height:58px;float:left; position:relative;}
+.gnbArea .menu li:first-child {margin-left:0px; position:relative;}
+
+
+
+
+
+/* 푸터 css */
+
+.footer{position:relative}
+.footer .csInfo{padding-bottom:60px}
+.footer .csInfo:after{content:'';display:block;clear:both}
+.footer .csInfo h2{float:left;margin:5px 30px 0 0;font-size:18px}
+.footer .csInfo .cs-contact{float:left;width:50%;padding-right:16px}
+.footer .csInfo .cs-contact .info{position:relative;overflow:hidden}
+.footer .csInfo .cs-contact .info .tel{display:block;color:#000;font-size:28px;line-height:1}
+.footer .csInfo .cs-contact .info .time{display:block;margin-top:5px;font-size:14px}
+.footer .csInfo .cs-contact .info .link{position:absolute;left:285px;top:5px;width:99px}
+.footer .csInfo .cs-contact .info .link a{display:block;margin-top:5px;color:#000;font-size:14px;font-weight:500;line-height:29px;text-align:center;background:#e7e7e7}
+.footer .csInfo .cs-contact .info .link a:first-child{margin-top:0}
+.footer .csInfo .cs-notice{float:left;width:50%;padding-left:16px}
+.footer .csInfo .cs-notice .news{position:relative;overflow:hidden}
+.footer .csInfo .cs-notice .news>li{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.footer .csInfo .cs-notice .news>li:before{content:'';display:inline-block;width:3px;height:3px;margin-right:10px;vertical-align:middle;border-radius:100%;background:#666}
+.footer .siteInfo{padding:12px 0;border-top:1px solid #e5e5e5}
+.footer .siteInfo .inner:after{content:'';display:block;clear:both}
+.footer .siteInfo .site-local{float:left}
+.footer .siteInfo .site-local li{display:inline-block;line-height:30px}
+.footer .siteInfo .site-local li+li:before{content:'';display:inline-block;width:1px;height:14px;margin:-2px 20px 0 16px;vertical-align:middle;background:#e6e6e6}
+.footer .siteInfo .site-other{float:right}
+.footer .siteInfo .site-other .social{display:inline-block;font-size:0;vertical-align:top}
+.footer .siteInfo .site-other .social li{display:inline-block;height:100%;margin-left:20px}
+
+.footer .siteInfo .site-other .social a.fb{width:18px;background-position:50% 0}
+.footer .siteInfo .site-other .social a.bl{background-position:50% -30px}
+.footer .siteInfo .site-other .social a.yt{background-position:50% -60px}
+.footer .siteInfo .site-other .family{position:relative;display:inline-block;width:170px;margin-left:22px;vertical-align:top}
+.footer .siteInfo .site-other .family .btn{position:relative;display:block;height:30px;padding:0 10px;font-size:13px;line-height:28px;border:1px solid #e5e5e5}
+.footer .siteInfo .site-other .family .btn:after{content:'';display:block;position:absolute;top:50%;right:10px;width:8px;height:8px;margin-top:-6px;border:solid #000;border-width:0 1px 1px 0;transform:rotate(45deg)}
+.footer .siteInfo .site-other .family .box{display:none;position:absolute;bottom:0;left:0;width:100%;padding:5px 0 30px;border:1px solid #8c8c8c;background:#fff}
+.footer .siteInfo .site-other .family .box li{margin-top:1px}
+.footer .siteInfo .site-other .family .box a{display:block;padding:0 10px;font-size:13px;line-height:1.7}
+.footer .siteInfo .site-other .family .box a:hover,
+.footer .siteInfo .site-other .family .box a:focus{background:#eee}
+.footer .siteInfo .site-other .family.open .btn{border-color:rgba(255,255,255,0);z-index:2}
+.footer .siteInfo .site-other .family.open .btn:after{margin-top:-1px;transform:rotate(-135deg)}
+.footer .siteInfo .site-other .family.open .box{display:block}
+.footer .corpInfo{padding:30px 0 40px;font-size:14px;border-top:1px solid #e5e5e5}
+
+.footer .corpInfo .addr{margin-top:5px}
+.footer .corpInfo .addr span+span{margin-left:6px}
+
+.footer .corpInfo .partner .partner01 {position:absolute; right:0; top:0; width:110px; height:30px;}
+

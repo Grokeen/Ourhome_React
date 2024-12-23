@@ -20,7 +20,7 @@
 [참고5](https://www.youtube.com/watch?v=xVeFY1Eq28g)
 [참고6](https://www.youtube.com/watch?v=xVeFY1Eq28g)
 마지막 걸로 해결했다,,,, 어휴,,,, import {} 맨 앞자리를 대문자로 바꾸니까 되더라.
-이걸로 한 세시간 소비한 거 같은데,,,,
+이걸로 한 네시간 소비한 거 같은데,,,,
 
 ## 갑자기 나온 경고문
 ne of your dependencies, babel-preset-react-app, is importing the
@@ -40,3 +40,6 @@ go away.
 npm install @babel/plugin-proposal-private-property-in-object --save-dev
 
 index.js에 뭘 설정헤야 상대경로가 가능한지 잘 모르겠다. 잘 안된다.
+
+[rest,restAPI,restful 특징 차이](https://hahahoho5915.tistory.com/54)
+
