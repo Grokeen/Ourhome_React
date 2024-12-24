@@ -17,7 +17,10 @@
 }
 
 /* ------------------------------------------------------------------------------------------------------------- */
-
+/* 사용 CSS
+      - 아워홈 몰
+      - 위택스
+*/
 /* ------------------------------------------------------------------------------------------------------------- */
 
 /* 2401020120 아워홈 css 본격 모티브 */
@@ -39,11 +42,17 @@
 .mainBest .tabCategory ul li:first-of-type > a[aria-selected="true"] {
   color: #ff6500;
 }
+
+
+/* 헤더 로고 설정 */
 .inner {
   max-width: 1240px;
   width: 100%;
-  margin: 0 auto
+  margin: 0 auto;
+  right: 20px;
 }
+
+
 
 /* 물건 정렬 */
 .itemList > li {
@@ -629,25 +638,120 @@ td.tdPrice .cost1 {
 }
 
 
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+
+
 /* 헤더 css */
-.header{position:absolute;top:0;left:0;width:100%;min-width:1280px;height:160px;border-bottom:1px solid #e6e6e6;background:#fff;z-index:9}
-.header.fixed{position:fixed}
-.headerArea{position:relative}
-.headerArea .inner{position:relative;padding:60px 0 20px}
-.headerArea h1{display:inline-block;margin-top:-3px;vertical-align:middle}
+.header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  min-width:1280px;
+  height:160px;
+  border-bottom:1px solid #e6e6e6;
+  background:#fff;
+  z-index:9
 
-.headerArea .headUtil{float:right;}
-.headerArea .headUtil .util{position: absolute;top:0;right:0;line-height:40px}
-.headerArea .headUtil .util li{display:inline-block;margin-left:12px;font-size:14px}
+}
+
+.header.fixed{
+  position:fixed;
+  
+}
+.headerArea{
+  position:relative;
+
+}
+.headerArea .inner{
+  position:relative;
+  padding:60px 0 20px
+}
+
+
+/* 로고 설정 */
+.headerArea .inner .logo {
+
+  float: right;
+  background-color: #ffffff;
+  background-image: url('./image/InsConfigPic/logo2.png');
+  /* background-size: 90px;
+  height: 65px;
+  width: 100px; */
+}
+/* .inner .logo:hover {
+  background-color: #080000cc; 
+} */
+.headerArea .inner .logoTitle{
+  position: relative;
+  /* font-size: 30px; */
+  float: right;
+  /* top: 20px;
+  right: 45px */
+}
+
+
+.headerArea h1{
+  display:inline-block;
+  margin-top:-3px;
+  vertical-align:middle;
+  
+}
+
+.headerArea .headUtil{
+  float:right;
+}
+.headerArea .headUtil .util{
+  position: absolute;
+  top:0;
+  right:0;
+  line-height:40px
+}
+.headerArea .headUtil .util li{
+  display:inline-block;
+  margin-left:12px;
+  font-size:14px
+}
 
 
 
-.gnbArea{position:relative;border-top:1px solid #e6e6e6}
-.gnbArea .inner{position:relative}
-.gnbArea .menu{float:left;font-size:0; padding-left:200px;}
-.gnbArea .menu:after{content:'';display:block;clear:both;}
-.gnbArea .menu li{display:inline-block;margin-left:100px;color:#000;font-size:20px;font-weight:600;line-height:58px;float:left; position:relative;}
-.gnbArea .menu li:first-child {margin-left:0px; position:relative;}
+.gnbArea{
+  position:relative;
+  border-top:1px solid #e6e6e6;
+  top : 1px;
+}
+.gnbArea .inner{
+  position:relative
+}
+.gnbArea .menu{
+  float:left;
+  font-size:0; 
+  padding-left:200px;
+}
+.gnbArea .menu:after{
+  content:'';
+  display:block;
+  clear:both;
+  
+}
+.gnbArea .menu li{
+  display:inline-block;
+  margin-left:100px;
+  color:#000;
+  font-size:20px;
+  font-weight:600;
+  line-height:58px;
+  float:left; 
+  position:relative;
+}
+.gnbArea .menu li:first-child {
+  margin-left:0px; 
+  position:relative;
+}
 
 
 
@@ -699,4 +803,192 @@ td.tdPrice .cost1 {
 .footer .corpInfo .addr span+span{margin-left:6px}
 
 .footer .corpInfo .partner .partner01 {position:absolute; right:0; top:0; width:110px; height:30px;}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* 메인화면 배너 설정 */
+.main-wrap .main-top:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+
+
+
+}
+
+.main-wrap .main-top .main-top-banner {
+  position: relative;
+  float: left;
+  width: 75px; /* 배너 아래, 배너 수 설정 */
+  left: 150px;
+  bottom: 160px;
+}
+
+.main-wrap .main-top .main-top-banner .wrap .slide a {
+  display: block;
+  position: relative;
+  height: 358px;
+  width: 800px; /* 배너 가로 사이즈 설정 */
+  text-decoration: none;
+  
+}
+
+.main-wrap .main-top .main-top-banner .wrap .slide a:focus {
+  border: 3px solid #0369d1;
+}
+
+.main-wrap .main-top .main-top-banner .wrap .slide a:active {
+  border: none;
+}
+
+.main-wrap .main-top .main-top-banner .wrap .slide a .tit {
+  position: relative;
+  z-index: 2;
+  width: 400px; /* 배너 큰 문구 설정 */
+  margin: 0;
+  padding: 64px 0 8px;
+  color: #222;
+  font-size: 2.4em;
+  line-height: 1.39;
+  letter-spacing: -1.8px;
+  font-weight: 700;
+
+}
+
+
+/* 배너 슬라이드 모션 설정 */
+.main-wrap .main-top .main-top-banner .wrap .slide a .txt {
+  position: relative;
+  z-index: 2;
+  color: #777;
+  font-size: 1.067em;
+}
+
+.main-wrap .main-top .main-top-banner .wrap .slide a img {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+.main-wrap .main-top .main-top-banner .slide-nav {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  padding: 0 13px 0 16px;
+  height: 28px;
+  background-color: #595959;
+  border-radius: 18px;
+}
+
+.main-wrap .main-top .main-top-banner .slide-nav .slick-page {
+  margin: 0 2px 0 0;
+  color: #ddd;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+}
+
+.main-wrap .main-top .main-top-banner .slide-nav .slick-page em {
+  color: #fff;
+  font-weight: 700;
+}
+
+.main-wrap .main-top .main-top-banner .slide-nav button {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+
+.main-wrap .main-top .main-top-banner .slide-nav button.active {
+  display: inline-block !important;
+}
+
+.main-wrap .main-top .main-mypage {
+  float: right;
+  width: 364px;
+  padding: 20px 0 0 0;
+}
+
+.main-wrap .main-top .main-mypage > .tit {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.main-wrap .main-top .main-mypage .title {
+  margin: 0 0 5px 0;
+  padding: 0;
+  color: #222;
+  font-size: 1.333em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+
+
+
+
+/* 메인화면 로그인 버튼 */
+.main-wrap .main-top .main-mypage .btn-area:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+
+}
+
+.main-wrap .main-top .main-mypage .btn-area a {
+  width: 170px;
+  height: 96px;
+  padding: 58px 0 0;
+  color: #fff;
+  border-radius: 16px;
+  font-size: 1.067em;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  background-position: 50% 18px ;
+  background-repeat: no-repeat;
+  transition: all ease 0.2s;
+  
+  position: relative;
+  right: 150px;
+  /* margin-right: 100%; */
+
+}
+
+.main-wrap .main-top .main-mypage .btn-area a.btn-login {
+  float: left;
+  background-color: #0369d1;
+  background-image: url('./image/InsMainPic/ico-login.png');
+
+}
+
+.main-wrap .main-top .main-mypage .btn-area a.btn-login:hover {
+  background-color: #0359b2;
+  
+}
+
+.main-wrap .main-top .main-mypage .btn-area a.btn-join {
+  float: right;
+  background-color: #103f8a;
+  background-image: url('./image/InsMainPic/ico-join.png');
+}
+
+.main-wrap .main-top .main-mypage .btn-area a.btn-join:hover {
+  background-color: #2c4175;
+}
+
+
 

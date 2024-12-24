@@ -6,11 +6,16 @@ const Header = () => {
             
             <div class="headerArea">
                 <div class="inner">
-                    <h1><a href="/" class="">
-                     (주)보험왕</a></h1>
-                    <div class="headSearch">
-               
-                    </div>
+                    <h1>
+                        <a href="/" class="logoTitle">
+                            (주)보험왕
+                        </a> 
+                        <a href="/" class="logo">
+                        </a>    
+                            
+                        
+                    </h1>
+
                     <div class="headUtil">                      
                         <ul class="util">    
                                     <li><a href="로그인 링크">로그인/회원가입</a></li>
