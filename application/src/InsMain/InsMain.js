@@ -41,12 +41,12 @@ function App() {
 								<div className="slide slick-slide slick-cloned" data-slick-index="-1" tabindex="-1" id="" aria-hidden="true" >
 									<a href="/" tabindex="-1">
 										<p className="tit">
-											지방세 고지서,
+											보험은 보험왕에서,
 											<br />
-											모바일로 간편하게 받자!
+											클릭으로 간편하게 받자!
 										</p>
 										<span className="txt">
-											고지서 전자송달을 신청해보세요!
+											보험을 신청해보세요!
 										</span>
 									</a>
 								</div>
@@ -64,6 +64,15 @@ function App() {
 					</div>
 				</div>
 
+			</div>
+
+
+
+
+			<div>
+
+
+				
 			</div>
 		</div>
 

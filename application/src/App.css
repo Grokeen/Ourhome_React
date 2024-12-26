@@ -673,33 +673,22 @@ td.tdPrice .cost1 {
 }
 
 
-/* 로고 설정 */
+/* 로고 설정1 */
 .headerArea .inner .logo {
-
   float: right;
   background-color: #ffffff;
-  background-image: url('./image/InsConfigPic/logo2.png');
-  /* background-size: 90px;
-  height: 65px;
-  width: 100px; */
+  background-image: url('./image/InsConfigPic/logo3.png');
+  background-size: 200px;
+  height: 70px;
+  width: 200px;
 }
-/* .inner .logo:hover {
-  background-color: #080000cc; 
-} */
-.headerArea .inner .logoTitle{
-  position: relative;
-  /* font-size: 30px; */
-  float: right;
-  /* top: 20px;
-  right: 45px */
-}
+
 
 
 .headerArea h1{
   display:inline-block;
-  margin-top:-3px;
+  margin-top:-53px;
   vertical-align:middle;
-  
 }
 
 .headerArea .headUtil{
@@ -718,14 +707,16 @@ td.tdPrice .cost1 {
 }
 
 
-
+/* 카테고리 설정 */
 .gnbArea{
   position:relative;
   border-top:1px solid #e6e6e6;
   top : 1px;
 }
 .gnbArea .inner{
-  position:relative
+  position:relative;
+  /* padding:60px 0 20px; */
+  
 }
 .gnbArea .menu{
   float:left;
@@ -745,7 +736,6 @@ td.tdPrice .cost1 {
   font-size:20px;
   font-weight:600;
   line-height:58px;
-  float:left; 
   position:relative;
 }
 .gnbArea .menu li:first-child {
@@ -992,3 +982,538 @@ td.tdPrice .cost1 {
 
 
 
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* 보험 가입/신청 화면 */
+.main-prd-title {
+  width: 1180px;
+  margin: 105px auto 90px;
+  font-size: 42px;
+  text-align: center;
+  font-weight: 600;
+
+  color: #222
+}
+
+.main-prd-wrap .navi-title {
+  display: none;
+}
+
+.main-prd-wrap .txt-blue {
+  color: #2c7fdf;
+}
+
+.main-prd-wrap .top-prd-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 10px;
+  text-align: left;
+  color: #111;
+  letter-spacing: -1px;
+  /* 좌로 밀기 */
+  left: 200px;
+  position: relative;
+}
+
+.main-prd-wrap .top-prd-left {
+  width: 1024px;
+  min-height: 128px;
+  z-index: 1;
+
+}
+
+.main-prd-wrap .top-prd-right {
+  position: absolute;
+  right: 24px;
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+
+}
+
+.main-prd-wrap .top-prd-box .top-prd-title .small-title {
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  font-weight: normal;
+  color: #757679
+}
+
+.main-prd-wrap .top-prd-box .top-prd-title .txt-blue {
+  color: #2c7fdf
+}
+
+.main-prd-wrap .top-prd-box .top-prd-title .cate-title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.55px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #2c7fdf;
+
+}
+
+.main-prd-wrap .top-prd-box .top-prd-title .large-title {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.39;
+  letter-spacing: -1px;
+  margin-top: 16px;
+  margin-bottom: 2px!important;
+}
+
+.main-prd-wrap .top-prd-box .top-prd-title .large-title br {
+  content: ' ';
+  margin-left: 8px
+}
+
+.main-prd-wrap .top-prd-box .top-prd-sub-title {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 0;
+  line-height: 1.63;
+  letter-spacing: -0.5px
+}
+
+.main-prd-wrap .top-prd-box .top-prd-sub-info {
+  position: relative;
+  font-size: 14px;
+  color: #2c7fdf;
+  margin: 10px 0;
+  padding: 10px 0 0 30px;
+  letter-spacing: -1px
+}
+
+.main-prd-wrap .top-prd-box .top-prd-sub-info:before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  content: '';
+  width: 25px;
+  height: 25px;
+  /* background-image: url('/resources/images/main/main_bg_icon.png'); */
+  background-position: -107px 0;
+  background-repeat: no-repeat;
+  background-size: 158px
+}
+
+.main-prd-wrap .top-prd-box .top-prd-img {
+  padding: 0;
+  height: auto
+}
+
+.main-prd-wrap .top-prd-box .top-prd-img img {
+  width: 128px
+}
+
+.main-prd-wrap .top-prd-box .top-prd-btn-box {
+  text-align: center;
+  width: 312px
+}
+
+.main-prd-wrap .top-prd-box .top-prd-btn-box .blue-btn {
+  display: block;
+  background: #2c7fdf;
+  margin-top: 50px;
+  padding: 17px 0;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #2c7fdf;
+  border-radius: 4px;
+  font-weight: bold
+}
+
+.main-prd-wrap .top-prd-box .top-prd-btn-box .white-btn {
+  display: block;
+  background: #fff;
+  padding: 16px 0;
+  color: #2c7fdf;
+  font-size: 16px;
+  border: 1px solid #2c7fdf;
+  border-radius: 4px;
+  font-weight: bold
+}
+
+.main-prd-wrap .top-prd-box .top-prd-btn-box .line-btn {
+  display: block;
+  background: #fff;
+  margin-top: 10px;
+  padding: 16px 0;
+  color: #2c7fdf;
+  font-size: 16px;
+  border: 1px solid #2c7fdf;
+  border-radius: 4px
+}
+
+.main-prd-wrap .sub-prd-box {
+  padding: 30px 0;
+  text-align: center
+}
+
+.main-prd-wrap .sub-prd-box li a {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px
+}
+
+.main-prd-wrap .list-prd-box .mainProduct {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  line-height: 30px;
+  position: relative;
+  padding-left: 40px
+}
+
+.main-prd-wrap .list-prd-box .corpCar:before {
+  background-position: -2px -6px
+}
+
+.main-prd-wrap .list-prd-box .myDrive:before {
+  background-position: -79px 1px
+}
+
+.main-prd-wrap .list-prd-box .bike:before {
+  background-position: -156px -6px
+}
+
+.main-prd-wrap .list-prd-box .oneday:before {
+  background-position: -245px -6px
+}
+
+.main-prd-wrap .list-prd-box .health:before {
+  background-position: -2px -84px
+}
+
+.main-prd-wrap .list-prd-box .dental:before {
+  background-position: -84px -80px
+}
+
+.main-prd-wrap .list-prd-box .smartM:before {
+  background-position: -158px -84px
+}
+
+.main-prd-wrap .list-prd-box .cancer:before {
+  background-position: -170px -490px
+}
+
+.main-prd-wrap .list-prd-box .reallossSick:before {
+  background-position: -85px -160px
+}
+
+.main-prd-wrap .list-prd-box .healthMini:before {
+  background-position: -2px -162px
+}
+
+.main-prd-wrap .list-prd-box .healthSick:before {
+  background-position: -84px -160px
+}
+
+.main-prd-wrap .list-prd-box .healthSickSimplePlan:before {
+  background-position: -245px -640px
+}
+
+.main-prd-wrap .list-prd-box .myFetus:before {
+  background-position: -2px -244px
+}
+
+.main-prd-wrap .list-prd-box .kids20:before {
+  background-position: -79px -242px
+}
+
+.main-prd-wrap .list-prd-box .realLossKids:before {
+  background-position: -159px -241px
+}
+
+.main-prd-wrap .list-prd-box .dentalKids:before {
+  background-position: -239px -236px
+}
+
+.main-prd-wrap .list-prd-box .consultingKids:before {
+  background-position: -326px -486px
+}
+
+.main-prd-wrap .list-prd-box .overSeas:before {
+  background-position: -159px -160px
+}
+
+.main-prd-wrap .list-prd-box .inTravel:before {
+  background-position: -232px -162px
+}
+
+.main-prd-wrap .list-prd-box .storm3:before {
+  background-position: -2px -324px
+}
+
+.main-prd-wrap .list-prd-box .anyHome:before {
+  background-position: -79px -320px
+}
+
+.main-prd-wrap .list-prd-box .propertyLong:before {
+  background-position: -157px -319px
+}
+
+.main-prd-wrap .list-prd-box .property:before {
+  background-position: -243px -319px
+}
+
+.main-prd-wrap .list-prd-box .storm6:before {
+  background-position: -320px -318px
+}
+
+.main-prd-wrap .list-prd-box .commercial:before {
+  background-position: -320px -242px
+}
+
+.main-prd-wrap .list-prd-box .tmCar:before {
+  background-position: -2px -403px
+}
+
+.main-prd-wrap .list-prd-box .golf:before {
+  background-position: -77px -396px
+}
+
+.main-prd-wrap .list-prd-box .drivemileage:before {
+  background-position: -166px -398px
+}
+
+.main-prd-wrap .list-prd-box .save:before {
+  background-position: -316px -160px
+}
+
+.main-prd-wrap .list-prd-box .holeinone:before {
+  background-position: -244px -398px
+}
+
+.main-prd-wrap .list-prd-box .minilife:before {
+  background-position: -323px -398px
+}
+
+.main-prd-wrap .list-prd-box .irp:before {
+  background-position: -317px 2px
+}
+
+.main-prd-wrap .list-prd-box .healthcare:before {
+  background-position: -240px -486px
+}
+
+.main-prd-wrap .list-prd-box .cat:before {
+  background-position: -6px -558px
+}
+
+.main-prd-wrap .list-prd-box .mykids_down:before {
+  background-position: -80px -560px
+}
+
+.main-prd-wrap .list-prd-box .carew:before {
+  background-position: -169px -560px
+}
+
+.main-prd-wrap .list-prd-box .surgery:before {
+  background-position: -244px -560px
+}
+
+.main-prd-wrap .list-prd-box .cyber:before {
+  background-position: -320px -560px
+}
+
+.main-prd-wrap .list-prd-box .health1:before {
+  background-position: -2px -635px
+}
+
+.main-prd-wrap .list-prd-box .bikeLong:before {
+  background-position: -80px -640px
+}
+
+.main-prd-wrap .list-prd-box .businessCar:before {
+  background-position: -162px -640px
+}
+
+.main-prd-wrap .list-prd-box .list-prd.standalone h3 {
+  padding-left: 0
+}
+
+.main-prd-wrap .list-prd-box .list-prd.standalone h3:before {
+  display: none
+}
+
+.main-prd-wrap .list-prd-box ul {
+  margin-top: 7px;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap
+}
+
+.main-prd-wrap .list-prd-box ul li {
+  margin-right: 24px
+}
+
+.main-prd-wrap .list-prd-box ul li:nth-child(3n) {
+  margin-right: 0
+}
+
+.main-prd-wrap .list-prd-box ul li:last-child {
+  margin-right: 0
+}
+
+.main-prd-wrap .list-prd-box ul li.list-prd a {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  transition: .2s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  position: relative;
+  display: block;
+  width: 377px;
+  height: 178px;
+  padding: 28px;
+  margin: 10px 0 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.08);
+  /* 좌로 밀기 */
+  left: 200px;
+  position: relative;
+}
+
+.main-prd-wrap .list-prd-box ul li.list-prd a:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 38px;
+  right: 30px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #111;
+  border-right: 2px solid #111;
+  transform: rotate(45deg)
+}
+
+.main-prd-wrap .list-prd-box ul li.list-prd a:hover {
+  transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.18)
+}
+
+.main-prd-wrap .list-prd-box .list-prd.standalone ul li a.smartm {
+  /* background: url('/m/resources/images/main/ico_main_standalone_smartm.png?ver=20201021') no-repeat right center; */
+  background-size: 92px
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.title {
+  padding-bottom: 0;
+  font-size: 22px;
+  line-height: 1.45;
+  letter-spacing: -0.5px;
+  vertical-align: top;
+  font-weight: 500;
+  margin-top: 0
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.title strong {
+  font-size: 22px;
+  line-height: 1.45;
+  font-weight: bold;
+  display: inline-block;
+  color: #111;
+  letter-spacing: -0.75px
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.title span {
+  font-size: 18px;
+  line-height: 1.56;
+  font-weight: normal;
+  display: inline-block;
+  margin: 2px 0;
+  letter-spacing: -0.5px;
+  vertical-align: middle;
+  margin-top: -2px
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.title mark.mark_new {
+  display: inline-block!important;
+  vertical-align: top;
+  font-size: 13px;
+  background: #ffedde;
+  font-weight: 500;
+  letter-spacing: -0.59px;
+  line-height: 17px;
+  color: #ff7802;
+  padding: 4px 6px;
+  border-radius: 8px;
+  margin-left: 4px;
+  margin-top: 4px
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.title span.event {
+  background: #ff5800
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.title span.new {
+  background: #014bb4
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.title span.hot {
+  background: #ed1c3a
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.title span.best {
+  background: #00a0bd
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.title span.upgrade {
+  background: #1e78d0
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #757679;
+  letter-spacing: -0.55px;
+  display: block;
+  font-weight: normal;
+  padding: 11px 0 0
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.text-sub {
+  font-size: 14px;
+  line-height: 1.43;
+  color: #2c7fdf;
+  display: block;
+  font-weight: normal;
+  padding: 1px 0;
+  letter-spacing: -0.44px
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.text span.blue {
+  color: #2c7fdf
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.text span.orange {
+  color: #f63
+}
+
+.main-prd-wrap .list-prd-box li.list-prd a p.text span.strong {
+  font-weight: 500
+}
+
+.main-prd-wrap .list-prd-box ul.etc-list {
+  border-top: 1px solid #efefef;
+  margin-top: 14px;
+  padding-top: 18px
+}
+
+.main-prd-wrap .list-prd-box ul.etc-list li.list-prd a p.title .call {
+  display: inline-table;
+  margin: -4px 3px 0 -1px;
+  vertical-align: middle;
+  width: 26px;
+  height: 26px;
+  /* background: url('/resources/images/main/ico-call.png') no-repeat center center; */
+  background-size: 26px
+}

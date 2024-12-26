@@ -10,11 +10,17 @@ import { Route , Routes} from "react-router-dom";
 import InsMain from "./InsMain/InsMain";
 import InsHeader from "./InsMain/header";
 import InsFooter from "./InsMain/footer";
-// import InsApplicate from "./InsApplicate/";
+// 
 // import InsCustomerService from "./InsCustomerService/";
 // import InsDemand from "./InsDemand/";
-// import InsProductInfo from "./InsProductInfo/";
+// import InsJoinApplication from "./InsJoinApplication/";
 
+// 보험 상품 정보
+import InsSelectProduct from "./InsProductInfo/InsSelectProduct";
+
+// 보험 가임/신청
+import InsSelectApplicationForm from "./InsJoinApplicationForm/InsSelectApplicationForm";
+import InsUpdateApplicationForm from "./InsJoinApplicationForm/InsUpdateApplicationForm";
 
 // 이커머스 페이지
 import ItemList from "./shop/itemList";
@@ -40,11 +46,16 @@ function App() {
                   <Route path="Ins_Header" element={<InsHeader />} />
                   <Route path="Ins_Footer" element={<InsFooter />} />
 
-                  {/* 보험 상품 정보 */}
-                  {/* <Route path="InsApplicate" element={<InsApplicate />} /> */}
 
-                  {/* 보험 신청 */}
-                  {/* <Route path="InsCustomerService" element={<InsCustomerService />} /> */}
+                  {/* 보험 상품 정보 */}
+                  <Route path="Ins_SelectProduct" element={<InsSelectProduct />} /> 
+
+
+                  {/* 보험 가입/신청 */}
+                  <Route path="Ins_SelectApplicationForm" element={<InsSelectApplicationForm />} /> 
+                  <Route path="Ins_UpdateApplicationForm" element={<InsUpdateApplicationForm />} /> 
+
+
 
                   {/* 보험 청구 */}
                   {/* <Route path="InsDemand" element={<InsDemand />} /> */}
