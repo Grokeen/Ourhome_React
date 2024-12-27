@@ -10,15 +10,14 @@ import { Route , Routes} from "react-router-dom";
 import InsMain from "./InsMain/InsMain";
 import InsHeader from "./InsMain/header";
 import InsFooter from "./InsMain/footer";
-// 
+
 // import InsCustomerService from "./InsCustomerService/";
-// import InsDemand from "./InsDemand/";
-// import InsJoinApplication from "./InsJoinApplication/";
+
 
 // 보험 상품 정보
 import InsSelectProduct from "./InsProductInfo/InsSelectProduct";
 
-// 보험 가임/신청
+// 보험 가임 신청
 import InsSelectApplicationForm from "./InsJoinApplicationForm/InsSelectApplicationForm";
 import InsUpdateApplicationForm from "./InsJoinApplicationForm/InsUpdateApplicationForm";
 
@@ -26,7 +25,8 @@ import InsUpdateApplicationForm from "./InsJoinApplicationForm/InsUpdateApplicat
 import ItemList from "./shop/itemList";
 import BarsketPage from "./shop/barsketPage";
 
-
+// 보험비 청구 신청
+import InsRequestMain from "./InsRequest/InsRequestMain";
 
 
 
@@ -56,9 +56,9 @@ function App() {
                   <Route path="Ins_UpdateApplicationForm" element={<InsUpdateApplicationForm />} /> 
 
 
+                  {/* 보험 청구 신청 */}
+                  <Route path="Ins_RequestMain" element={<InsRequestMain />} /> 
 
-                  {/* 보험 청구 */}
-                  {/* <Route path="InsDemand" element={<InsDemand />} /> */}
 
                   {/* 보험 고객센터 */}
                   {/* <Route path="InsProductInfo" element={<InsProductInfo />} /> */}

@@ -812,22 +812,63 @@ td.tdPrice .cost1 {
 
 }
 
-.main-wrap .main-top .main-top-banner {
-  position: relative;
-  float: left;
-  width: 75px; /* 배너 아래, 배너 수 설정 */
-  left: 150px;
-  bottom: 160px;
+
+/* 2024-12-27 김용록 : 반응형 사이즈 변화 추가 */
+@media (max-width: 1920px){
+  .main-wrap .main-top .main-top-banner {
+    position: relative;
+    float: left;
+    width: 75px; /* 배너 아래, 배너 수 설정 */
+    left: 350px;
+    bottom: 160px;
+  }
+  .main-wrap .main-top .main-top-banner .wrap .slide a {
+    display: block;
+    position: relative;
+    height: 358px;
+    width: 65%; /* 배너 가로 사이즈 설정 */
+    text-decoration: none;
+    
+  }
+
+}
+@media (max-width: 1512px){ 
+  .main-wrap .main-top .main-top-banner {
+    position: relative;
+    float: left;
+    width: 75px; /* 배너 아래, 배너 수 설정 */
+    left: 200px;
+    bottom: 160px;
+  }
+
+  .main-wrap .main-top .main-top-banner .wrap .slide a {
+    display: block;
+    position: relative;
+    height: 358px;
+    width: 57%; /* 배너 가로 사이즈 설정 */
+    text-decoration: none;
+    
+  }
+}
+@media(max-width: 1280px){
+  .main-wrap .main-top .main-top-banner {
+    position: relative;
+    float: left;
+    width: 75px; /* 배너 아래, 배너 수 설정 */
+    left: 150px;
+    bottom: 160px;
+  }
+  .main-wrap .main-top .main-top-banner .wrap .slide a {
+    display: block;
+    position: relative;
+    height: 358px;
+    width: 400px; /* 배너 가로 사이즈 설정 */
+    text-decoration: none;
+    
+  }
 }
 
-.main-wrap .main-top .main-top-banner .wrap .slide a {
-  display: block;
-  position: relative;
-  height: 358px;
-  width: 800px; /* 배너 가로 사이즈 설정 */
-  text-decoration: none;
-  
-}
+
 
 .main-wrap .main-top .main-top-banner .wrap .slide a:focus {
   border: 3px solid #0369d1;
@@ -938,25 +979,54 @@ td.tdPrice .cost1 {
 
 }
 
-.main-wrap .main-top .main-mypage .btn-area a {
-  width: 170px;
-  height: 96px;
-  padding: 58px 0 0;
-  color: #fff;
-  border-radius: 16px;
-  font-size: 1.067em;
-  font-weight: 700;
-  text-align: center;
-  line-height: 1;
-  background-position: 50% 18px ;
-  background-repeat: no-repeat;
-  transition: all ease 0.2s;
-  
-  position: relative;
-  right: 150px;
-  /* margin-right: 100%; */
 
+/* 2024-12-27 김용록 : 반응형 사이즈 변화 추가 */
+@media (max-width: 1920px){
+
+  .main-wrap .main-top .main-mypage .btn-area a {
+    width: 170px;
+    height: 96px;
+    padding: 58px 0 0;
+    color: #fff;
+    border-radius: 16px;
+    font-size: 1.067em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    background-position: 50% 18px ;
+    background-repeat: no-repeat;
+    transition: all ease 0.2s;
+    
+    position: relative;
+    right: 350px;
+    /* margin-right: 100%; */
+  
+  }
 }
+@media (max-width: 1512px){
+
+  .main-wrap .main-top .main-mypage .btn-area a {
+    width: 170px;
+    height: 96px;
+    padding: 58px 0 0;
+    color: #fff;
+    border-radius: 16px;
+    font-size: 1.067em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    background-position: 50% 18px ;
+    background-repeat: no-repeat;
+    transition: all ease 0.2s;
+    
+    position: relative;
+    right: 200px;
+    /* margin-right: 100%; */
+  
+  }
+}
+
+
 
 .main-wrap .main-top .main-mypage .btn-area a.btn-login {
   float: left;
@@ -1008,17 +1078,36 @@ td.tdPrice .cost1 {
   color: #2c7fdf;
 }
 
-.main-prd-wrap .top-prd-box {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 0 10px;
-  text-align: left;
-  color: #111;
-  letter-spacing: -1px;
-  /* 좌로 밀기 */
-  left: 200px;
-  position: relative;
+/* 2024-12-27 김용록 : 반응형 사이즈 변화 추가 */
+@media (max-width: 1920px){
+  .main-prd-wrap .top-prd-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 10px;
+    text-align: left;
+    color: #111;
+    letter-spacing: -1px;
+    /* 좌로 밀기 */
+    left: 350px;
+    position: relative;
+  }
+  
 }
+@media (max-width: 1512px){
+  .main-prd-wrap .top-prd-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 10px;
+    text-align: left;
+    color: #111;
+    letter-spacing: -1px;
+    /* 좌로 밀기 */
+    left: 200px;
+    position: relative;
+  }
+
+}
+
 
 .main-prd-wrap .top-prd-left {
   width: 1024px;
@@ -1348,7 +1437,8 @@ td.tdPrice .cost1 {
   margin-top: 7px;
   display: flex;
   align-items: stretch;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+
 }
 
 .main-prd-wrap .list-prd-box ul li {
@@ -1363,7 +1453,28 @@ td.tdPrice .cost1 {
   margin-right: 0
 }
 
-.main-prd-wrap .list-prd-box ul li.list-prd a {
+
+/* 2024-12-27 김용록 : 반응형 사이즈 변화 추가 */
+@media (max-width: 1920px){
+    .main-prd-wrap .list-prd-box ul li.list-prd a {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    position: relative;
+    display: block;
+    width: 377px;
+    height: 178px;
+    padding: 28px;
+    margin: 10px 0 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 40px 0 rgba(0,0,0,0.08);
+    /* 좌로 밀기 */
+    left: 350px;
+  }
+}
+@media (max-width: 1512px){
+  .main-prd-wrap .list-prd-box ul li.list-prd a {
   transform: scale(1);
   -webkit-transform: scale(1);
   transition: .2s ease-in-out;
@@ -1378,8 +1489,9 @@ td.tdPrice .cost1 {
   box-shadow: 0 8px 40px 0 rgba(0,0,0,0.08);
   /* 좌로 밀기 */
   left: 200px;
-  position: relative;
 }
+}
+
 
 .main-prd-wrap .list-prd-box ul li.list-prd a:after {
   display: block;

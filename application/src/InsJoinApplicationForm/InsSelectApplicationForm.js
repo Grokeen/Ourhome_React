@@ -50,7 +50,7 @@ function App() {
                 <div class="list-prd-box">
                     <ul>
                         <li class="list-prd">   
-                            <a target="_self" class="splunk_mainProduct mainProduct dental" >      
+                             <Link to={"/Ins_UpdateApplicationForm"} class="splunk_mainProduct mainProduct dental"  style={{ textDecoration: 'none' }}>
                                 <p class="title">
                                     <strong>
                                         치아보험
@@ -66,7 +66,7 @@ function App() {
 
                                 <p class="text-sub">
                                 </p>           
-                            </a>       
+                            </Link>      
                         </li>   
                     </ul>
                 </div>
