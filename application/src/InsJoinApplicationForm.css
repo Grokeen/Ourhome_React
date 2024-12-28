@@ -1,0 +1,309 @@
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* 신청서 서식 전용 CSS */
+.main-board .board-wrap .board-area .tab-area .tab-cont {
+  position: relative;
+}
+
+.main-board .board-wrap .board-area .tab-area .tab-cont ul {
+  list-style-type: none;
+  padding: 20px 0 0;
+  margin: 0;
+}
+
+.main-board .board-wrap .board-area .tab-area .tab-cont ul li {
+  margin: 5px 0 0;
+  padding: 0;
+}
+
+.main-board .board-wrap .board-area .tab-area .tab-cont ul li:first-child {
+  margin: 0;
+}
+
+.main-board .board-wrap .board-area .tab-area .tab-cont ul li a {
+  display: block;
+  padding: 7px 0;
+  overflow: hidden;
+  font-size: 1.067em;
+  line-height: 2;
+}
+
+.main-board .board-wrap .board-area .tab-area .tab-cont ul li a .subject {
+  overflow: hidden;
+  margin: 0;
+  color: #222;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+.main-board .board-wrap .board-area .tab-area .tab-cont ul li a .date {
+  display: inline-block;
+  /* float: right; */
+  padding: 0 0 0 20px;
+  color: #888;
+  font-size: 0.933em;
+  font-family: 'Roboto', sans-serif;
+  vertical-align: middle;
+  line-height: 1.3;
+}
+
+.main-board .board-wrap .board-area .tab-area .tab-cont ul li a .price {
+  display: inline-block;
+  /* float: right; */
+  padding: 0 0 0 20px;
+  color: #0369d1;
+  font-size: 0.933em;
+  vertical-align: middle;
+  line-height: 1.3;
+}
+
+.main-board .board-wrap .board-area .tab-area .tab-cont ul li a:hover .subject {
+  color: #0369d1;
+  text-decoration: underline;
+}
+
+.main-board .board-wrap .board-area .tab-area .tab-cont .btn-more {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  /* background-image: url('../images/main/ico-more.png'); */
+  text-indent: -99999px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* 툴팁 아이콘 */
+/* .ico-tooltip {width:24px; height:24px; background-image:url('./image/InsJoinPic/ico-tooltip.png');} */
+
+.title-3 {
+  margin-bottom: 15px;
+  font-size: 1.6em;
+  color: #111;
+}
+.title-wrap .req-info {
+  float: right;
+  padding: 0;
+  line-height: 36px;
+}
+.board-form {
+  border-top: 1px solid #3a3b4a;
+}
+.board-form table th {
+  height: 57px;
+  padding: 10px 15px;
+  color: #111;
+  text-align: left;
+  background-color: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  border-left: 0;
+}
+.board-form table th .req {
+  margin-top: -10px;
+}
+.board-form table th .bg-chk {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  color: #333;
+}
+.board-form table th .bg-chk.dp-inline {
+  display: inline-block;
+}
+.board-form table th .bg-chk label {
+  font-size: 0.9333em;
+  letter-spacing: -0.03em;
+}
+.board-form table td {
+  height: 56px;
+  padding: 10px 15px;
+  border: 1px solid #e8e8e8;
+  border-left: 0;
+}
+.board-form table th:last-child,
+.board-form table td:last-child {
+  border-right: 0;
+}
+.board-form table thead th {
+  height: 50px;
+  padding: 5px 15px;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+}
+.board-form table th.no-bg {
+  color: #333;
+  font-weight: 400;
+  background-color: #fff;
+}
+.board-form table .bd-l {
+  border-left: 1px solid #e8e8e8;
+}
+.board-form table thead tr:first-child th,
+.board-form table tbody tr:first-child th,
+.board-form table tbody tr:first-child td {
+  border-top: 0;
+}
+.board-form table thead tr th:first-child {
+  border-left: 0;
+}
+.board-form table tfoot tr th,
+.board-form table tfoot tr td {
+  color: #0369d1;
+  font-weight: 700;
+}
+.board-form table tfoot tr th.no-bg {
+  color: #0369d1;
+  font-weight: 700;
+}
+
+.board-form table tbody tr.bg-total th,
+.board-form table tbody tr.bg-total td {
+  font-weight: 700;
+  background-color: #eefcda;
+}
+.board-form table tbody tr.bg-subtotal th,
+.board-form table tbody tr.bg-subtotal td {
+  background-color: #f8f8f8;
+}
+.board-form table tbody tr.bg-total02 th,
+.board-form table tbody tr.bg-total02 td {
+  font-weight: 700;
+  background-color: #ffeeef;
+}
+.board-form table tbody tr.bg-total03 th,
+.board-form table tbody tr.bg-total03 td {
+  color: #fff;
+  font-weight: 700;
+  background-color: #84736b;
+}
+
+.board-form table tbody tr td.dp01 {
+  padding-left: 15px;
+}
+.board-form table tbody tr td.dp02 {
+  padding-left: 35px;
+}
+.board-form table tbody tr td.dp03 {
+  padding-left: 55px;
+}
+.board-form table tbody tr td.dp04 {
+  padding-left: 75px;
+}
+.board-form table tbody tr td.dp05 {
+  padding-left: 95px;
+}
+
+.board-form .search-area {
+  margin: 0;
+  padding: 20px 0 0 0;
+  text-align: center;
+}
+.board-form .search-area .btn-search {
+  display: inline-block;
+  width: 100px;
+  height: 48px;
+  margin: 0 3px 0 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.066em;
+  color: #fff;
+  background-color: #566a9e;
+  border-radius: 6px;
+}
+.board-form .search-area .btn-search:hover {
+  background-color: #435584;
+}
+.board-form .search-area .btn-search + .button {
+  margin-left: 3px;
+}
+
+.board-form .file-area-wrap {
+  border: 0;
+}
+.board-form .file-area-wrap .input-area {
+  padding: 0;
+  margin: 10px 0 0;
+  border: 0;
+}
+.board-form .file-area-wrap .input-area:first-child {
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* 날짜 선택 */
+.datepicker {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+.datepicker > span.err input {
+  border-color: #ff0000;
+}
+.datepicker > span {
+  display: block;
+  position: relative;
+  float: left;
+}
+.datepicker > span + span:before {
+  content: '-';
+  display: block;
+  float: left;
+  width: 20px;
+  text-align: center;
+  line-height: 36px;
+}
+.datepicker > span input {
+  display: block;
+  width: 134px;
+  height: 36px;
+  margin: 0;
+  padding: 0 34px 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.datepicker > span input[readonly] {
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.datepicker > span input[disabled] {
+  color: #999;
+  background-color: #f4f4f4;
+}
+
+.datepicker > span .ui-datepicker-trigger {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  line-height: 1px;
+  text-indent: -9999px;
+  background: url('./image/InsJoinPic/ico-calendar.png') no-repeat 0 0;
+}
+.datepicker .txt {
+  vertical-align: middle;
+}
+.datepicker.readonly span .ui-datepicker-trigger {
+  cursor: default;
+}
+.datepicker.disabled span .ui-datepicker-trigger {
+  cursor: default;
+  opacity: 0.5;
+}
