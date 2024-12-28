@@ -83,6 +83,10 @@ function App() {
 
             <section className="mainBest">
                 <div className="inner">
+                    <h1 className="text-3xl">
+                        우린 이런 상품을 팔아요.
+                    </h1>
+                    <br/>
                     <div className="tabCont tabON">
                         <ol className="itemList" id="HIGH_SALE">
 
