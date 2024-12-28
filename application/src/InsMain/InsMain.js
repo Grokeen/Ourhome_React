@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 
 
 function App() {
+	function login(){
+		
+
+	}
 
 	return (
 
@@ -32,6 +36,7 @@ function App() {
 						 </a>
 					</div>
 				</div>
+
 
 				{/* 배너 */}
 				<div className="slick main-top-banner">
@@ -72,7 +77,7 @@ function App() {
 			<div>
 
 
-				
+
 			</div>
 		</div>
 
