@@ -17,7 +17,8 @@ function App() {
                 <br />
                 <br />
                 <br />
-
+                <br />
+                <br />
             </div>
 
 
@@ -33,7 +34,7 @@ function App() {
 
 
                 <div class="title-wrap">
-                    <p class="title-3">취득세정보 입력</p>
+                    <p class="title-3">(바인딩) 보험 신청서 입력</p>
 
                     <p class="req-info"><span class="req">*</span> 는 필수 입력 항목입니다.</p>
                 </div>
@@ -54,8 +55,10 @@ function App() {
                                 <td colspan="3">
                                     <span class="bg-chk">
                                         <input type="radio" id="actxObjKndDtlCd01" name="actxObjKndDtlCd" value="0102" checked="checked" />
-                                        <label for="actxObjKndDtlCd01">유상취득(농지 외)</label>
+                                        <label for="actxObjKndDtlCd01">유상취득(농지 외)  </label>
                                     </span>
+
+                                
 
                                     <span class="bg-chk">
                                         <input type="radio" id="actxObjKndDtlCd02" name="actxObjKndDtlCd" value="0105" />
@@ -96,7 +99,7 @@ function App() {
                                 <td>
                                     <span class="bg-chk">
                                         <input type="radio" id="adjTrgtRgnYn1" name="adjTrgtRgnYn" value="Y" />
-                                        <label for="adjTrgtRgnYn1">해당</label>
+                                        <label for="adjTrgtRgnYn1">해당 </label>
                                     </span>
 
                                     <span class="bg-chk">
@@ -108,7 +111,7 @@ function App() {
                                 <td>
                                     <span class="bg-chk">
                                         <input type="radio" id="vilLxrhYn1" name="vilLxrhYn" value="Y" />
-                                        <label for="vilLxrhYn1">해당</label>
+                                        <label for="vilLxrhYn1">해당 </label>
                                     </span>
 
                                     <span class="bg-chk">
@@ -122,15 +125,15 @@ function App() {
                                 <td colspan="3">
                                     <span class="bg-chk">
                                         <input type="radio" id="hh1HosCnt1" name="hh1HosCnt" value="1" checked="checked" />
-                                        <label for="hh1HosCnt1">중과제외</label>
+                                        <label for="hh1HosCnt1">중과제외 </label>
                                     </span>
                                     <span class="bg-chk">
                                         <input type="radio" id="hh1HosCnt2" name="hh1HosCnt" value="2" />
-                                        <label for="hh1HosCnt2">2주택</label>
+                                        <label for="hh1HosCnt2">2주택 </label>
                                     </span>
                                     <span class="bg-chk">
                                         <input type="radio" id="hh1HosCnt3" name="hh1HosCnt" value="3" />
-                                        <label for="hh1HosCnt3">3주택</label>
+                                        <label for="hh1HosCnt3">3주택 </label>
                                     </span>
 
                                     <span class="bg-chk">
@@ -157,18 +160,7 @@ function App() {
                                     </div>
                                 </td>
                                 <th scope="row">
-                                    취득일자 <span class="req" title="필수 입력 항목">*</span>
-                                    <a href="/" class="tool-tip click tooltipstered" ><i class="iconset ico-tooltip">툴팁 레이어 열기</i></a>
-
-                                    <div class="tooltip-contents">
-                                        <div id="tooltip-cont-4" class="pop-over">
-                                            <div class="cont-tool" tabindex="0">
-                                                잔금지급이 완료되는 날짜입니다.
-                                            </div>
-
-                                            <button type="button" class="tooltip-close">툴팁 닫기</button>
-                                        </div>
-                                    </div>
+                                    취득일자 
                                 </th>
                                 <td>
                                     <div class="datepicker">
@@ -186,7 +178,7 @@ function App() {
                                 <td>
                                     <span class="bg-chk mr05">
                                         <input type="radio" id="dclrInscAdtxCd1" name="dclrInscAdtxCd" value="0401010" disabled="" />
-                                        <label for="dclrInscAdtxCd1">일반무신고가산세</label>
+                                        <label for="dclrInscAdtxCd1">일반무신고가산세 </label>
                                     </span>
 
                                     <span class="bg-chk mr00">
@@ -226,16 +218,17 @@ function App() {
                             </tr>
                         </tbody>
                     </table>
-                </div>
-
-                
-
-
-                
-               
+                </div>  
               
             </div>
+            <div class="button-group mt30">
+	            <button type="button" class="button navy" id="btnLotxClcResult">
+                    신청하기
+                </button>
+            </div>
         </div>
+
+        
 
     );
 }

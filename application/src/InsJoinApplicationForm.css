@@ -1,80 +1,14 @@
-/* ------------------------------------------------------------------------------------------------------------- */
-
-/* ------------------------------------------------------------------------------------------------------------- */
-
-/* 신청서 서식 전용 CSS */
-.main-board .board-wrap .board-area .tab-area .tab-cont {
-  position: relative;
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./fonts/KoPubWorld_Dotum_Medium.ttf) format('ttf');
 }
-
-.main-board .board-wrap .board-area .tab-area .tab-cont ul {
-  list-style-type: none;
-  padding: 20px 0 0;
-  margin: 0;
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./fonts/SEBANG_Gothic_Bold.ttf) format('ttf');
 }
-
-.main-board .board-wrap .board-area .tab-area .tab-cont ul li {
-  margin: 5px 0 0;
-  padding: 0;
-}
-
-.main-board .board-wrap .board-area .tab-area .tab-cont ul li:first-child {
-  margin: 0;
-}
-
-.main-board .board-wrap .board-area .tab-area .tab-cont ul li a {
-  display: block;
-  padding: 7px 0;
-  overflow: hidden;
-  font-size: 1.067em;
-  line-height: 2;
-}
-
-.main-board .board-wrap .board-area .tab-area .tab-cont ul li a .subject {
-  overflow: hidden;
-  margin: 0;
-  color: #222;
-  letter-spacing: -0.5px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: middle;
-  line-height: 1.2;
-}
-
-.main-board .board-wrap .board-area .tab-area .tab-cont ul li a .date {
-  display: inline-block;
-  /* float: right; */
-  padding: 0 0 0 20px;
-  color: #888;
-  font-size: 0.933em;
-  font-family: 'Roboto', sans-serif;
-  vertical-align: middle;
-  line-height: 1.3;
-}
-
-.main-board .board-wrap .board-area .tab-area .tab-cont ul li a .price {
-  display: inline-block;
-  /* float: right; */
-  padding: 0 0 0 20px;
-  color: #0369d1;
-  font-size: 0.933em;
-  vertical-align: middle;
-  line-height: 1.3;
-}
-
-.main-board .board-wrap .board-area .tab-area .tab-cont ul li a:hover .subject {
-  color: #0369d1;
-  text-decoration: underline;
-}
-
-.main-board .board-wrap .board-area .tab-area .tab-cont .btn-more {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  width: 18px;
-  height: 18px;
-  /* background-image: url('../images/main/ico-more.png'); */
-  text-indent: -99999px;
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./fonts/SEBANG_Gothic.ttf) format('ttf');
 }
 
 /* ------------------------------------------------------------------------------------------------------------- */
@@ -84,19 +18,61 @@
 /* 툴팁 아이콘 */
 /* .ico-tooltip {width:24px; height:24px; background-image:url('./image/InsJoinPic/ico-tooltip.png');} */
 
-.title-3 {
-  margin-bottom: 15px;
-  font-size: 1.6em;
-  color: #111;
+@media (max-width: 1920px) {
+  .title-3 {
+    /* 타이틀 설정 */
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    color: #111;
+    left: 350px;
+    position: relative;
+  }
+  .title-wrap .req-info {
+    float: right;
+    right: 450px;
+    position: relative;
+    padding: 0;
+    line-height: 36px;
+  }
 }
-.title-wrap .req-info {
-  float: right;
-  padding: 0;
-  line-height: 36px;
+@media (max-width: 1512px) {
+  .title-3 {
+    /* 타이틀 설정 */
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    color: #111;
+    left: 200px;
+    position: relative;
+  }
+  .title-wrap .req-info {
+    float: right;
+    right: 200px;
+    position: relative;
+    padding: 0;
+    line-height: 36px;
+  }
 }
-.board-form {
-  border-top: 1px solid #3a3b4a;
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* 테이블 설정 */
+@media (max-width: 1920px) {
+  .board-form {
+    /* border-top: 1px solid #3a3b4a; */
+    left: 350px;
+    position: relative;
+  }
 }
+@media (max-width: 1512px) {
+  .board-form {
+    /* border-top: 1px solid #3a3b4a; */
+    left: 200px;
+    position: relative;
+  }
+}
+
 .board-form table th {
   height: 57px;
   padding: 10px 15px;
@@ -111,9 +87,13 @@
 }
 .board-form table th .bg-chk {
   display: block;
+
   margin: 0;
   font-weight: 400;
   color: #333;
+
+  /* position: absolute;
+  left: 100%; */
 }
 .board-form table th .bg-chk.dp-inline {
   display: inline-block;
@@ -306,4 +286,190 @@
 .datepicker.disabled span .ui-datepicker-trigger {
   cursor: default;
   opacity: 0.5;
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* 버튼 설정(다른 설정도 괜찮아 보여서 다 가져옴) */
+
+
+@media (max-width: 1920px) {
+    button {
+        cursor: pointer;
+        border: 0;
+        vertical-align: middle;
+        top: 30px;
+        left: 800px;
+        position: relative;
+      }
+  }
+@media (max-width: 1512px) {
+    button {
+        cursor: pointer;
+        border: 0;
+        vertical-align: middle;
+        top: 30px;
+        left: 650px;
+        position: relative;
+      }
+}
+
+
+
+
+button.reset {
+  padding: 0;
+  background-color: transparent;
+}
+button.link {
+  padding: 0;
+  color: #0369d1;
+  background-color: transparent;
+}
+button.link:hover {
+  text-decoration: underline;
+  vertical-align: middle;
+}
+
+.button,
+a.button {
+  overflow: hidden;
+  display: inline-block;
+  height: 48px;
+  margin: 0;
+  padding: 0 25px;
+  color: #111;
+  font-size: 1.066em;
+  line-height: 46px;
+  cursor: pointer;
+  border: 1px solid #888;
+  border-radius: 4px;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: #fff;
+}
+.button:hover,
+a.button:hover {
+  color: #000;
+  border-color: #000;
+}
+.button[disabled],
+.button.disabled,
+a.button.disabled {
+  cursor: default;
+  opacity: 1;
+  border-color: #ddd !important;
+  color: #888 !important;
+  cursor: default;
+  background-color: #f8f8f8 !important;
+}
+a.button.round {
+  height: 40px;
+  line-height: 38px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+/* button size */
+.button.small {
+  height: 36px;
+  padding: 0 15px;
+  font-size: 0.933em;
+  line-height: 34px;
+}
+.button.large {
+  height: 56px;
+  padding: 0 30px;
+  font-size: 1.2em;
+  line-height: 54px;
+  font-size: 1.2em;
+}
+
+/* button 안에 아이콘 있을 때 */
+.button.icon {
+  padding-left: 20px;
+}
+.button.small.icon {
+  padding-left: 10px;
+}
+.button.large.icon {
+  padding-left: 25px;
+}
+
+/* button color */
+.button.gray {
+  color: #fff;
+  border-color: #9da4b1;
+  background-color: #9da4b1;
+}
+.button.gray:hover {
+  color: #fff;
+  border-color: #7d8595;
+  background-color: #7d8595;
+}
+.button.blue {
+  color: #fff;
+  border-color: #0369d1;
+  background-color: #0369d1;
+}
+.button.blue:hover {
+  color: #fff;
+  border-color: #0359b2;
+  background-color: #0359b2;
+}
+.button.navy {
+  color: #fff;
+  border-color: #3a3b4a;
+  background-color: #3a3b4a;
+}
+.button.navy:hover {
+  color: #fff;
+  border-color: #000;
+  background-color: #000;
+}
+.button.white {
+  color: #333;
+  border: 0;
+  background-color: #fff;
+}
+.button.green {
+  color: #fff;
+  border-color: #028a00;
+  background-color: #028a00;
+}
+.button.green:hover {
+  color: #fff;
+  border-color: #057b03;
+  background-color: #057b03;
+}
+.button.border {
+  color: #111;
+  border: 1px solid #888;
+  background-color: #fff;
+}
+.button.border.white {
+  color: #fff;
+  border-color: #fff;
+  background-color: transparent;
+}
+.button.border.blue {
+  color: #0369d1;
+  border-color: #0369d1;
+  background-color: #fff;
+}
+.button.border.blue:hover {
+  color: #0359b2;
+  border-color: #0359b2;
+  background-color: #fff;
+}
+.button.border.gray {
+  border-color: #ccc;
+  background-color: #fff;
 }

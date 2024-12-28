@@ -21,9 +21,8 @@ const Footer = () => {
                     <div class="site-other">
                        
                         <div class="family">
-                            <a href="#" class="btn" aria-expanded="true">FAMILY SITE</a>
+                            <a href="https://github.com/Grokeen" class="btn" aria-expanded="true">FAMILY SITE</a>
                             <ul class="box">
-                                <li><a href="/" >조환열</a></li>
                                 <li><a href="/" >김용록</a></li>
                             </ul>
                         </div>
