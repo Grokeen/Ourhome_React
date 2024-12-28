@@ -1,6 +1,6 @@
 
 
-import "../App.css";
+import "../shop.css";
 import React, { useState, useEffect } from 'react';
 
 

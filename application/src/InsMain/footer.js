@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -16,7 +16,8 @@ const Footer = () => {
                         <li><a href="/" class="hover:bg-gray-300 rounded-full" ><b>개인정보처리방침</b></a></li>
                         <li><a href="/" class="hover:bg-gray-300 rounded-full" >혜택</a></li>
                         <li><a href="/" class="hover:bg-gray-300 rounded-full" >SITEMAP</a></li>
-                        <li><a href="/" class="hover:bg-gray-300 rounded-full" >판매전시관</a></li>
+                        <li><Link to={"/ItemList"} class="transition hover:bg-gray-100 rounded-full "  style={{ textDecoration: 'none' }}>판매전시관</Link></li>
+                        
                     </ul>
                     <div class="site-other">
                        

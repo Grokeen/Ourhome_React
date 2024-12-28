@@ -1,0 +1,619 @@
+
+
+
+/* 백업 본 */
+
+/* 2312312056 메인 폰트 추가 */
+@font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(./fonts/KoPubWorld_Dotum_Medium.ttf) format('ttf');
+  }
+  @font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(./fonts/SEBANG_Gothic_Bold.ttf) format('ttf');
+  }
+  @font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(./fonts/SEBANG_Gothic.ttf) format('ttf');
+  }
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+
+/* 2401020120 아워홈 css 본격 모티브 */
+.wrap {
+    position: relative;
+    width: 100%;
+    min-width: 1280px;
+    min-height: 100%;
+    padding-top: 160px !important;
+    overflow: hidden;
+  }
+  .mainBest .tabCategory ul li {
+    line-height: 28px;
+  }
+  .mainBest .tabCategory ul li:first-of-type > a {
+    font-weight: 600;
+    color: #000;
+  }
+  .mainBest .tabCategory ul li:first-of-type > a[aria-selected='true'] {
+    color: #ff6500;
+  }
+  
+  /* 헤더 로고 설정 */
+  .inner {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    right: 20px;
+  }
+  
+  /* 물건 정렬 */
+  .itemList > li {
+    position: relative;
+    float: left;
+    /* 2401022130 정렬 가로길이 수정 286 -> 270 */
+    width: 270px;
+    margin: 30px 0 0 32px;
+  }
+  .itemList > li:nth-child(4n-3) {
+    clear: left;
+    margin-left: 0;
+  }
+  .itemList > li:nth-child(-n + 4) {
+    margin-top: 0;
+  }
+  
+  /* 2401020120 사진 */
+  .itemList .iLink {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .itemList .thum {
+    display: block;
+    position: relative;
+    border: 1px solid #eee;
+    overflow: hidden;
+  }
+  .thum img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* 2401021918 등급 넘버 */
+  ol.itemList {
+    counter-reset: itemNum;
+  }
+  ol.itemList > li:before {
+    content: counter(itemNum, decimal-leading-zero);
+    counter-increment: itemNum;
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  ol.itemList .iHover {
+    top: 42px;
+  }
+  .itemList:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  /* 2401022003 기본 숫자 출력 제거 */
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  /* 2401020120 본문 css */
+  .itemList .cont {
+    display: block;
+    margin-top: 18px;
+  }
+  .itemList .cont .txtFlag {
+    margin-bottom: 11px;
+  }
+  .itemList .cont .txt {
+    display: block;
+    margin-top: 2px;
+    color: #888;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .itemList .cont .txtPrice {
+    display: block;
+    margin-top: 10px;
+  }
+  .itemList .cont .txtOption {
+    margin-top: 8px;
+  }
+  .itemList .cont .tit {
+    display: block;
+    color: #000;
+    font-size: 17px;
+    font-weight: 400;
+    display: -webkit-box;
+    max-height: 3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    word-break: normal;
+  }
+  
+  .txtPrice {
+    display: block;
+    /* 경고 이유 확인 필요 */
+    vertical-align: bottom;
+  }
+
+  .txtPrice .rate {
+    margin-left: 3px;
+    color: #ff6500;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+  }
+  
+  .txtPrice .cost1 {
+    color: #000;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .txtPrice .cost2 {
+    margin-left: 3px;
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: line-through;
+  }
+  
+  /* 2401021518 냉동 관련 css 추가 */
+  .txtOption .option.temp1 {
+    color: #448ccb;
+  }
+  .txtOption .option.temp3 {
+    color: #666;
+  }
+  
+  /* 2401020120 장바구니 */
+  .itemList .iHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: calc(100% - 63px) 0 21px 0;
+    text-align: center;
+  }
+  .itemList .iHover button {
+    display: inline-block;
+    position: relative;
+    /* 2401022242 나타나는 장바구니 이미지에서 테두리 제거. */
+    border: none;
+    width: 42px;
+    height: 42px;
+    margin: 0 2px;
+    overflow: hidden;
+    text-indent: -9999px;
+
+    /* 2401020201 png 경로 에러 -> 디렉토리 변경으로 해결 */
+    background: url(../images/pc/ico_item_tool.png) 0 0 no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+  }
+  .itemList .iHover button.cart {
+    background-position: 0 0;
+  }
+  .itemList .iHover button.favor {
+    background-position: 0 -42px;
+  }
+  .itemList .iHover button.compare {
+    background-position: 0 -84px;
+  }
+  .itemList > li:hover .iHover button,
+  .itemList > li.on .iHover button {
+    opacity: 1;
+  }
+  
+  /*  */
+  .itemListSlideWrap + .btnArea button {
+    min-width: 205px;
+    width: 205px;
+    height: 57px;
+    line-height: 57px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .itemListSlideWrap .itemList > li {
+    width: 175px;
+    margin: 0;
+  }
+  .itemListSlideWrap .itemList .cont .tit {
+    height: 50px;
+    font-size: 17px;
+    line-height: 25px;
+    color: #888;
+  }
+  .itemListSlideWrap .itemList .cart {
+    display: inline-block;
+    position: absolute;
+    top: 116px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    margin: 0 2px;
+    overflow: hidden;
+    text-indent: -9999px;
+  
+    background: url(../images/pc/ico_item_tool.png) 0 0 no-repeat;
+    z-index: 1;
+  }
+  .itemListSlideWrap {
+    position: relative;
+  }
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  .container {
+    padding-bottom: 100px;
+  }
+  .contents {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .tblForm {
+    border-collapse: separate;
+    border-top: 1px solid #000;
+  }
+  .tblForm th,
+  .tblForm td {
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+  .tblForm th {
+    padding: 22px 15px;
+    color: #000;
+    background: #fafafa;
+    font-weight: 400;
+  }
+  .tblForm th .ness {
+    vertical-align: top;
+  }
+  .tblForm td {
+    padding: 15px 20px;
+    vertical-align: middle;
+  }
+  .tblForm tbody th {
+    padding: 22px 20px;
+    vertical-align: top;
+  }
+  .tblForm tbody th,
+  .tblForm tbody th ~ td {
+    text-align: left;
+  }
+  .tblForm tbody th ~ td {
+    padding: 15px 0 15px 30px;
+  }
+  td.tdPrice .cost1 {
+    color: #000;
+    font-size: 16px;
+  }
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  /* 총 금액 계산 */
+  .cartBannArea {
+    margin: -50px 0 20px;
+  }
+  .cartBoard .tblForm + .tblForm {
+    margin-top: 60px;
+  }
+  .cartBoard .tdTools .btnS {
+    min-width: 80px;
+    margin: 7px 0 0 0;
+  }
+  .cartBoard .tdTools .btnS:first-child {
+    margin-top: 0;
+  }
+  .cartBoard .tdTools .btnSI {
+    margin: 7px 2px 0;
+  }
+  .cartBoard .tdTotal {
+    padding: 22px 20px;
+    color: #000;
+    text-align: center;
+    border-bottom: 0;
+    background: #fafafa;
+  }
+  .cartBoard .tdTotal .cost {
+    font-size: 20px;
+  }
+  .cartBoard .tdTotal .cost b {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .cartBoard .tdTotal .txt {
+    margin-right: 10px;
+  }
+  .cartBoard .tdTotal .txt2 {
+    color: #888;
+  }
+  .cartBoard .tdTotal .symbol {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    margin-top: -7px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-indent: -9999px;
+  }
+  .cartBoard .tdTotal .symbol.plus:before,
+  .cartBoard .tdTotal .symbol.plus:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 19px;
+    margin: -9px 0 0 -2px;
+    background: #b5b5b5;
+  }
+  .cartBoard .tdTotal .symbol.plus:after {
+    width: 19px;
+    height: 3px;
+    margin: -1px 0 0 -10px;
+  }
+  .cartBoard .tdTotal .symbol.equal:before,
+  .cartBoard .tdTotal .symbol.equal:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 19px;
+    height: 3px;
+    margin: 0 0 0 -10px;
+    background: #b5b5b5;
+  }
+  .cartBoard .tdTotal .symbol.equal:before {
+    margin-top: -4px;
+  }
+  .cartBoard .tdTotal .symbol.equal:after {
+    margin-top: 4px;
+  }
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  /* table 관련 css */
+  .itmTarget {
+    text-align: left !important;
+  }
+  
+  .itmTarget > a {
+    display: block;
+  }
+  
+  .itmTarget .thum {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    vertical-align: middle;
+    border: 1px solid #eee;
+  }
+  .itmTarget .cont {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .itmTarget .cont .tit {
+    display: block;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    display: -webkit-box;
+    max-height: 4.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    word-break: normal;
+  }
+  
+  .itmTarget .cont .txt {
+    margin-top: 2px;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .itmTarget .thum + .cont {
+    margin-left: -105px;
+    padding-left: 120px;
+    max-width: 100%;
+  }
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  /* 장바구니 수량 관련 css */
+  .frmAmount {
+    display: inline-block;
+    position: relative;
+    padding: 0 24px;
+    height: 24px;
+    vertical-align: middle;
+    background: #fff;
+  }
+  .frmAmount input {
+    border: 0;
+    width: 42px;
+    height: 100%;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: top;
+    border: solid #e0e0e0;
+    border-width: 1px 0;
+  }
+  .frmAmount button {
+    position: absolute;
+    top: 0;
+    width: 24px;
+    height: 100%;
+    overflow: hidden;
+    text-indent: -9999px;
+    border: 1px solid #e0e0e0;
+    background: url(../images/pc/ico_amount.png) 0 0 no-repeat;
+  }
+  .frmAmount button.minus {
+    left: 0;
+  }
+  .frmAmount button.plus {
+    right: 0;
+    background-position: 0 -22px;
+  }
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  /* 장바구니/쇼핑 레이아웃 */
+  /* 2401031327 전체화면으로 띄우는 css 추가 */
+  .fullscreeniframe {
+    position: fixed; /* relative와 다르게 화면에서 벗어나는 것 */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: none; /* 테두리 제거 */
+    z-index: 1000;
+  }
+  .dimmed {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5; /* 투명도 */
+    z-index: 98;
+  }
+  .layerPop {
+    /* 2401030424 기존에 선언되어 있는 style 가져와서 선언 */
+    display: block;
+    top: 295.5px;
+  
+    position: fixed;
+    /* display: none; */
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    margin-left: -250px;
+    padding: 30px;
+    background: #fff;
+    /* background: hsl(0, 0%, 0%); */
+    z-index: 99;
+  }
+  .layerPop .layTop {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000;
+  }
+  .layerPop .layTop .laytit {
+    font-size: 18px;
+  }
+  .layerPop .layTop .close {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    text-indent: -9999px;
+  
+    /* 2401031216 테두리 제거 */
+    border: none;
+    background: url(../images/pc/ico_close.png) 50% 50% no-repeat;
+  }
+  .layerPop .layCon {
+    position: relative;
+  }
+  .layerPop .txtAlert {
+    display: table-cell;
+    width: 1%;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .layerPop .txtAlert .txt1 {
+    color: #000;
+  }
+  .layerPop .txtAlert .txt2 {
+    color: #888;
+  }
+  
+  /* 장바구니 js 추가 시, 버튼 위치 */
+  .btnArea {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .btnArea .btnST:first-child {
+    margin-left: 0;
+  }
+  .btnArea .btnST:last-child {
+    margin-right: 0;
+  }
+  
+  .btnArea .btnM {
+    margin: 0 2px;
+  }
+  
+  /* 장바구니 js 버튼 스타일 */
+  .btnST {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: #000;
+    vertical-align: middle;
+    border: 1px solid #aaa;
+    background-color: #fff;
+  }
+  .btnST.action {
+    color: #fff;
+    border-color: #ff6500;
+    background-color: #ff6500;
+  }
+  .btnST.other {
+    color: #fff;
+    border-color: #aaa;
+    background-color: #aaa;
+  }
+  .btnM {
+    min-width: 156px;
+    height: 48px;
+    padding: 0 28px;
+    font-size: 16px;
+    line-height: 47px;
+  }
+  
+  /* ------------------------------------------------------------------------------------------------------------- */
+  
+  /* ------------------------------------------------------------------------------------------------------------- */

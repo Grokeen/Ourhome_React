@@ -2,7 +2,11 @@ import React, { useState} from 'react';
 import { Link } from "react-router-dom";
 
 const Header = () => {
-
+	// 세션값 가져오는 문법 추가
+	const retrieveSessionItem = (key) => {
+        const item = sessionStorage.getItem(key);
+        return item ? JSON.parse(item) : null;
+    };
      
 
   return (
@@ -17,10 +21,22 @@ const Header = () => {
 
                     <div class="headUtil">                      
                         <ul class="util">    
-                                    <li>
-                                        
-                                        <a href="로그인 링크">로그인/회원가입</a></li>
-                            <li><a href="고객센터 링크">고객센터</a></li>
+                            <li>
+                                <a href="로그인 링크" class="hover:bg-slate-400">
+                                    로그인 
+                                </a>
+                                /
+                                <a href="로그인 링크" class="hover:bg-slate-400" >
+                                    회원가입
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="고객센터 링크" class="hover:bg-slate-400" >
+                                    고객센터
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

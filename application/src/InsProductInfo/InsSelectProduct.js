@@ -1,6 +1,5 @@
 
-import "../App.css";
-
+import "../shop.css";
 import React, { useState} from 'react';
 // , useEffect,  useRef 
 

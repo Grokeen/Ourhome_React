@@ -934,6 +934,7 @@ td.tdPrice .cost1 {
   clear: both;
   height: 0;
   visibility: hidden;
+
 }
 
 /* 2024-12-27 김용록 : 반응형 사이즈 변화 추가 */
@@ -949,7 +950,7 @@ td.tdPrice .cost1 {
     display: block;
     position: relative;
     height: 358px;
-    width: 65%; /* 배너 가로 사이즈 설정 */
+    width: 50%; /* 배너 가로 사이즈 설정 */
     text-decoration: none;
   }
 }
@@ -986,6 +987,8 @@ td.tdPrice .cost1 {
     text-decoration: none;
   }
 }
+
+
 
 .main-wrap .main-top .main-top-banner .wrap .slide a:focus {
   border: 3px solid #0369d1;
@@ -1060,6 +1063,9 @@ td.tdPrice .cost1 {
 
 .main-wrap .main-top .main-mypage {
   float: right;
+  /* position: relative;
+  left: 1000px; */
+
   width: 364px;
   padding: 20px 0 0 0;
 }
@@ -1104,8 +1110,12 @@ td.tdPrice .cost1 {
     background-repeat: no-repeat;
     transition: all ease 0.2s;
 
-    position: relative;
-    right: 350px;
+
+    /* 메인 화면 로그인 버튼 */  
+    /* position: relative;  */
+    /* right: 350px;  */
+
+    /* top : 400px; */
     /* margin-right: 100%; */
   }
 }
