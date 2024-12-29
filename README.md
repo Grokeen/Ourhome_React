@@ -6,6 +6,7 @@
 
 
 ```linux
+cd application
 npm run build
 npm start 
 ```
