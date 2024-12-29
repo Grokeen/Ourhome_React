@@ -29,7 +29,8 @@ import BarsketPage from "./shop/barsketPage";
 // 보험비 청구 신청
 import InsRequestMain from "./InsRequest/InsRequestMain";
 
-
+// 보험 마이페이지
+import InsMyPageMain from "./InsMyPage/InsMyPageMain";
 
 // -------------------------------------------------------------------------------
 // desc    :    2024-12-21 김용록 헤더/푸터 설정
@@ -60,9 +61,11 @@ function App() {
                   {/* 보험 청구 신청 */}
                   <Route path="Ins_RequestMain" element={<InsRequestMain />} /> 
 
+                  {/* 보험 마이페이지 */}
+                  <Route path="Ins_MyPageMain" element={<InsMyPageMain />} /> 
 
                   {/* 보험 고객센터 */}
-                  {/* <Route path="InsProductInfo" element={<InsProductInfo />} /> */}
+                  {/* <Route path="InsProductInfo" element={<InsProductInfo />} /> 
 
                   {/* 이커머스 */}
                   <Route path="barsketPage" element={<BarsketPage />} />
