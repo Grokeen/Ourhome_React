@@ -3,13 +3,41 @@
 
 # 실행방법
 
-
-
 ```linux
 cd application
 npm run build
 npm start 
 ```
+
+## 기술 스택
+1. react
+    - Node.js
+    - react-rouete
+    - session(로그인)
+
+    - 아키텍쳐 패턴
+        - Flux 패턴(단방향 패턴 / 1 tear)
+        - MVVM 패턴(VM)
+        - MVC 패턴
+
+    - 디자인 패턴
+        - compotent 패턴
+        - singletone 패턴
+        - command 패턴
+
+2. css5
+    - 참고한 사이트
+        - 위택스
+        - 삼성화재
+        - 삼성화재 다이렉트
+        - 아워홈
+        - 겟앰프트 
+
+3. tailwind css
+    - 부족한 css에 보충 용도로 사용
+
+4. html5
+
 
 
 
