@@ -148,13 +148,13 @@ function InsFireRequestForm() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>영수증 이미지 첨부</th>
+                                    <th>영수증 첨부</th>
                                     <td>
                                         <input
                                             name="receiptImages"
                                             type="file"
                                             title="영수증 첨부"
-                                            accept="image/*"
+                                            accept="image/*,application/pdf"
                                             multiple
                                             required
                                             className="input-file"
@@ -185,20 +185,20 @@ function InsFireRequestForm() {
                                             name="additionalDocuments"
                                             type="file"
                                             title="화재 사고 보고서 첨부"
-                                            accept="image/*"
+                                            accept="image/*,application/pdf"
                                             multiple
                                             className="input-file"
                                         />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>추가 서류 이미지 첨부</th>
+                                    <th>추가 서류 첨부</th>
                                     <td>
                                         <input
                                             name="additionalDocuments"
                                             type="file"
-                                            title="추가 서류 이미지 첨부"
-                                            accept="image/*"
+                                            title="추가 서류 첨부"
+                                            accept="image/*,application/pdf"
                                             multiple
                                             className="input-file"
                                         />
