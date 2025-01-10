@@ -5,6 +5,9 @@ import { Link, useNavigate } from "react-router-dom";
 function InsRequest() {
     const navigate = useNavigate();
 
+
+
+    
     // API 호출 후 확인 함수
     const handleNavigation = async (url) => {
         if(sessionStorage.getItem("jwtToken")){

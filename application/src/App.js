@@ -34,14 +34,23 @@ import InsFireJoinFinal from "./InsJoinForm/InsFireJoinFinal.js";
 
 import InsAutoJoinForm from "./InsJoinForm/InsAutoJoinForm.js";
 import InsAutoJoinFinal from "./InsJoinForm/InsAutoJoinFinal.js";
+
+
 // 이커머스 페이지
 import ItemList from "./shop/itemList";
 import BarsketPage from "./shop/barsketPage";
 
 // 보험비 청구 신청
 import InsRequest from "./InsRequest/InsRequest";
+
 import InsHealthRequest from "./InsRequest/InsHealthRequest.js";
 import InsHealthRequestForm from "./InsRequest/InsHealthRequestForm.js";
+
+import InsFireRequest from "./InsRequest/InsFireRequest.js";
+import InsFireRequestForm from "./InsRequest/InsFireRequestForm.js";
+
+import InsAutoRequest from "./InsRequest/InsAutoRequest.js";
+import InsAutoRequestForm from "./InsRequest/InsAutoRequestForm.js";
 
 // 보험 마이페이지
 import InsMyPageMain from "./InsMyPage/InsMyPageMain";
@@ -87,6 +96,13 @@ function App() {
                   <Route path="/request" element={<InsRequest />} /> 
                   <Route path="/request/health" element={<InsHealthRequest />} />
                   <Route path="/request/health/:id" element={<InsHealthRequestForm />} /> 
+
+                  <Route path="/request/fire" element={<InsFireRequest />} />
+                  <Route path="/request/fire/:id" element={<InsFireRequestForm />} />
+
+                  <Route path="/request/auto" element={<InsAutoRequest />} />
+                  <Route path="/request/auto/:id" element={<InsAutoRequestForm />} />
+
 
                   {/* 보험 마이페이지 */}
                   <Route path="Ins_MyPageMain" element={<InsMyPageMain />} /> 

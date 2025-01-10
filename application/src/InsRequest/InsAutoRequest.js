@@ -2,7 +2,7 @@ import "../App.css";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-function InsHealthRequest() {
+function InsAutoRequest() {
     const navigate = useNavigate();
     const [insuranceData, setInsuranceData] = useState([]);
 
@@ -16,7 +16,7 @@ function InsHealthRequest() {
 
         const fetchInsuranceData = async () => {
             try {
-                const response = await fetch("http://localhost:8080/request/health", {
+                const response = await fetch("http://localhost:8080/request/auto", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -98,11 +98,11 @@ function InsHealthRequest() {
                                     style={{ textDecoration: "none" }}
                                     onClick={(e) => {
                                         e.preventDefault(); // 기본 이동 방지
-                                        handleNavigation("/request/health/"+item.insuranceId); // 적절한 경로 설정
+                                        handleNavigation("/request/auto/"+item.insuranceId); // 적절한 경로 설정
                                     }}
                                 >
                                     <p className="title">
-                                        <strong>{item.productTitle || "건강보험"}</strong>
+                                        <strong>{item.vehicleModel + " "+ item.vehicleNumber || "자동차보험"}</strong>
                                     </p>
                                     <p className="text">
                                         <span className="fc-blue">
@@ -139,4 +139,4 @@ function InsHealthRequest() {
     );
 }
 
-export default InsHealthRequest;
+export default InsAutoRequest;
