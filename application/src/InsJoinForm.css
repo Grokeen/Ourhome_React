@@ -1,0 +1,475 @@
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./fonts/KoPubWorld_Dotum_Medium.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./fonts/SEBANG_Gothic_Bold.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(./fonts/SEBANG_Gothic.ttf) format('ttf');
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* 툴팁 아이콘 */
+/* .ico-tooltip {width:24px; height:24px; background-image:url('./image/InsJoinPic/ico-tooltip.png');} */
+
+@media (max-width: 1920px) {
+  .title-3 {
+    /* 타이틀 설정 */
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    color: #111;
+    left: 350px;
+    position: relative;
+  }
+  .title-wrap .req-info {
+    float: right;
+    right: 450px;
+    position: relative;
+    padding: 0;
+    line-height: 36px;
+  }
+}
+@media (max-width: 1512px) {
+  .title-3 {
+    /* 타이틀 설정 */
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    color: #111;
+    left: 200px;
+    position: relative;
+  }
+  .title-wrap .req-info {
+    float: right;
+    right: 200px;
+    position: relative;
+    padding: 0;
+    line-height: 36px;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* 테이블 설정 */
+@media (max-width: 1920px) {
+  .board-form {
+    /* border-top: 1px solid #3a3b4a; */
+    left: 350px;
+    position: relative;
+  }
+}
+@media (max-width: 1512px) {
+  .board-form {
+    /* border-top: 1px solid #3a3b4a; */
+    left: 200px;
+    position: relative;
+  }
+}
+
+.board-form table th {
+  height: 57px;
+  padding: 10px 15px;
+  color: #111;
+  text-align: left;
+  background-color: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  border-left: 0;
+}
+.board-form table th .req {
+  margin-top: -10px;
+}
+.board-form table th .bg-chk {
+  display: block;
+
+  margin: 0;
+  font-weight: 400;
+  color: #333;
+
+  /* position: absolute;
+  left: 100%; */
+}
+.board-form table th .bg-chk.dp-inline {
+  display: inline-block;
+}
+.board-form table th .bg-chk label {
+  font-size: 0.9333em;
+  letter-spacing: -0.03em;
+}
+.board-form table td {
+  height: 56px;
+  padding: 10px 15px;
+  border: 1px solid #e8e8e8;
+  border-left: 0;
+}
+.board-form table th:last-child,
+.board-form table td:last-child {
+  border-right: 0;
+}
+.board-form table thead th {
+  height: 50px;
+  padding: 5px 15px;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+}
+.board-form table th.no-bg {
+  color: #333;
+  font-weight: 400;
+  background-color: #fff;
+}
+.board-form table .bd-l {
+  border-left: 1px solid #e8e8e8;
+}
+.board-form table thead tr:first-child th,
+.board-form table tbody tr:first-child th,
+.board-form table tbody tr:first-child td {
+  border-top: 0;
+}
+.board-form table thead tr th:first-child {
+  border-left: 0;
+}
+.board-form table tfoot tr th,
+.board-form table tfoot tr td {
+  color: #0369d1;
+  font-weight: 700;
+}
+.board-form table tfoot tr th.no-bg {
+  color: #0369d1;
+  font-weight: 700;
+}
+
+.board-form table tbody tr.bg-total th,
+.board-form table tbody tr.bg-total td {
+  font-weight: 700;
+  background-color: #eefcda;
+}
+.board-form table tbody tr.bg-subtotal th,
+.board-form table tbody tr.bg-subtotal td {
+  background-color: #f8f8f8;
+}
+.board-form table tbody tr.bg-total02 th,
+.board-form table tbody tr.bg-total02 td {
+  font-weight: 700;
+  background-color: #ffeeef;
+}
+.board-form table tbody tr.bg-total03 th,
+.board-form table tbody tr.bg-total03 td {
+  color: #fff;
+  font-weight: 700;
+  background-color: #84736b;
+}
+
+.board-form table tbody tr td.dp01 {
+  padding-left: 15px;
+}
+.board-form table tbody tr td.dp02 {
+  padding-left: 35px;
+}
+.board-form table tbody tr td.dp03 {
+  padding-left: 55px;
+}
+.board-form table tbody tr td.dp04 {
+  padding-left: 75px;
+}
+.board-form table tbody tr td.dp05 {
+  padding-left: 95px;
+}
+
+.board-form .search-area {
+  margin: 0;
+  padding: 20px 0 0 0;
+  text-align: center;
+}
+.board-form .search-area .btn-search {
+  display: inline-block;
+  width: 100px;
+  height: 48px;
+  margin: 0 3px 0 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.066em;
+  color: #fff;
+  background-color: #566a9e;
+  border-radius: 6px;
+}
+.board-form .search-area .btn-search:hover {
+  background-color: #435584;
+}
+.board-form .search-area .btn-search + .button {
+  margin-left: 3px;
+}
+
+.board-form .file-area-wrap {
+  border: 0;
+}
+.board-form .file-area-wrap .input-area {
+  padding: 0;
+  margin: 10px 0 0;
+  border: 0;
+}
+.board-form .file-area-wrap .input-area:first-child {
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* 날짜 선택 */
+.datepicker {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+.datepicker > span.err input {
+  border-color: #ff0000;
+}
+.datepicker > span {
+  display: block;
+  position: relative;
+  float: left;
+}
+.datepicker > span + span:before {
+  content: '-';
+  display: block;
+  float: left;
+  width: 20px;
+  text-align: center;
+  line-height: 36px;
+}
+.datepicker > span input {
+  display: block;
+  width: 134px;
+  height: 36px;
+  margin: 0;
+  padding: 0 34px 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.datepicker > span input[readonly] {
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.datepicker > span input[disabled] {
+  color: #999;
+  background-color: #f4f4f4;
+}
+
+.datepicker > span .ui-datepicker-trigger {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  line-height: 1px;
+  text-indent: -9999px;
+  background: url('./image/InsJoinPic/ico-calendar.png') no-repeat 0 0;
+}
+.datepicker .txt {
+  vertical-align: middle;
+}
+.datepicker.readonly span .ui-datepicker-trigger {
+  cursor: default;
+}
+.datepicker.disabled span .ui-datepicker-trigger {
+  cursor: default;
+  opacity: 0.5;
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* 버튼 설정(다른 설정도 괜찮아 보여서 다 가져옴) */
+
+
+@media (max-width: 1920px) {
+    button {
+        cursor: pointer;
+        border: 0;
+        vertical-align: middle;
+        top: 30px;
+        left: 800px;
+        position: relative;
+      }
+  }
+@media (max-width: 1512px) {
+    button {
+        cursor: pointer;
+        border: 0;
+        vertical-align: middle;
+        top: 30px;
+        left: 650px;
+        position: relative;
+      }
+}
+
+
+
+
+button.reset {
+  padding: 0;
+  background-color: transparent;
+}
+button.link {
+  padding: 0;
+  color: #0369d1;
+  background-color: transparent;
+}
+button.link:hover {
+  text-decoration: underline;
+  vertical-align: middle;
+}
+
+.button,
+a.button {
+  overflow: hidden;
+  display: inline-block;
+  height: 48px;
+  margin: 0;
+  padding: 0 25px;
+  color: #111;
+  font-size: 1.066em;
+  line-height: 46px;
+  cursor: pointer;
+  border: 1px solid #888;
+  border-radius: 4px;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: #fff;
+}
+.button:hover,
+a.button:hover {
+  color: #000;
+  border-color: #000;
+}
+.button[disabled],
+.button.disabled,
+a.button.disabled {
+  cursor: default;
+  opacity: 1;
+  border-color: #ddd !important;
+  color: #888 !important;
+  cursor: default;
+  background-color: #f8f8f8 !important;
+}
+a.button.round {
+  height: 40px;
+  line-height: 38px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+/* button size */
+.button.small {
+  height: 36px;
+  padding: 0 15px;
+  font-size: 0.933em;
+  line-height: 34px;
+}
+.button.large {
+  height: 56px;
+  padding: 0 30px;
+  font-size: 1.2em;
+  line-height: 54px;
+  font-size: 1.2em;
+}
+
+/* button 안에 아이콘 있을 때 */
+.button.icon {
+  padding-left: 20px;
+}
+.button.small.icon {
+  padding-left: 10px;
+}
+.button.large.icon {
+  padding-left: 25px;
+}
+
+/* button color */
+.button.gray {
+  color: #fff;
+  border-color: #9da4b1;
+  background-color: #9da4b1;
+}
+.button.gray:hover {
+  color: #fff;
+  border-color: #7d8595;
+  background-color: #7d8595;
+}
+.button.blue {
+  color: #fff;
+  border-color: #0369d1;
+  background-color: #0369d1;
+}
+.button.blue:hover {
+  color: #fff;
+  border-color: #0359b2;
+  background-color: #0359b2;
+}
+.button.navy {
+  color: #fff;
+  border-color: #3a3b4a;
+  background-color: #3a3b4a;
+}
+.button.navy:hover {
+  color: #fff;
+  border-color: #000;
+  background-color: #000;
+}
+.button.white {
+  color: #333;
+  border: 0;
+  background-color: #fff;
+}
+.button.green {
+  color: #fff;
+  border-color: #028a00;
+  background-color: #028a00;
+}
+.button.green:hover {
+  color: #fff;
+  border-color: #057b03;
+  background-color: #057b03;
+}
+.button.border {
+  color: #111;
+  border: 1px solid #888;
+  background-color: #fff;
+}
+.button.border.white {
+  color: #fff;
+  border-color: #fff;
+  background-color: transparent;
+}
+.button.border.blue {
+  color: #0369d1;
+  border-color: #0369d1;
+  background-color: #fff;
+}
+.button.border.blue:hover {
+  color: #0359b2;
+  border-color: #0359b2;
+  background-color: #fff;
+}
+.button.border.gray {
+  border-color: #ccc;
+  background-color: #fff;
+}
