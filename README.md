@@ -42,7 +42,7 @@
 <img src="https://img.shields.io/badge/Spring%20boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"/>
 <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white/">
 
-<img src="https://img.shields.io/badge/node.js-FFFFFF?style=for-the-badge&logo=nodedotjs&logoColor=white/">
+<a><img src="https://img.shields.io/badge/node.js-FFFFFF?style=for-the-badge&logo=nodedotjs&logoColor=white/"></a>
 <img src="https://img.shields.io/badge/React-0088CC?style=for-the-badge&logo=react&logoColor=white/">
 <img src="https://img.shields.io/badge/css3-FC4C02?style=for-the-badge&logo=css3&logoColor=white/">
 <img src="https://img.shields.io/badge/tailwind css-6935D3?style=for-the-badge&logo=tailwindcss&logoColor=white/">
