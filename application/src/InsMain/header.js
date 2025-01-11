@@ -122,6 +122,12 @@ const Header = () => {
 	
 			documentNone();
 	
+			// 2025-01-11 김용록 : 프론트엔드 테스트용
+			if(id_val === "master2"){
+				handleLoginSuccess("1111111111");
+			}
+
+
 			// 유효성 검사
 			if (!id_val || id_val.length < 3) {
 				alert("아이디는 최소 3자 이상이어야 합니다.");

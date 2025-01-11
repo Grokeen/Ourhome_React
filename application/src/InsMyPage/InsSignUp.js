@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../InsJoinForm.css";
+import "../css/InsSignUp.css";
 import { useNavigate } from "react-router-dom";
 
 function SignUpForm() {
@@ -11,11 +11,34 @@ function SignUpForm() {
         const script = document.createElement("script");
         script.src = "https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"; // 주소 검색 API
         script.async = true;
-        document.body.appendChild(script);
 
-        return () => {
-            document.body.removeChild(script);
+        // 2025-01-11 김용록 : 카카오가 새창에서 열리길래 iframe 문법 추가
+        try{
+            // const iframe = document.createElement('iframe');
+            // iframe.style.width = '100%'; // 필요한 크기로 설정
+            // iframe.style.height = '100%';
+            // iframe.style.border = 'none'; 
+            // document.body.appendChild(iframe);
+            // iframe.onload = () => {
+            //     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                
+            //     if (iframeDoc) {
+            //         iframeDoc.body.appendChild(script);
+            //     }
+            // };
+            document.body.appendChild(script);
+
+            return () => {
+                document.body.removeChild(script);
+                // document.body.removeChild(iframe); 
         };
+        }catch(excep){
+            console.log(excep);
+        }
+        
+
+
+        
     }, []);
 
     const handleAddressSearch = () => {
@@ -101,6 +124,7 @@ function SignUpForm() {
                                         <input
                                             type="text"
                                             name="username"
+                                            className="100px"
                                             placeholder="아이디를 입력하세요"
                                             required
                                             minLength="3"
@@ -172,18 +196,23 @@ function SignUpForm() {
                                                 type="text"
                                                 name="location"
                                                 placeholder="주소를 검색하세요"
+                                                className="w-50"
                                                 required
                                                 disabled // 읽기 전용
                                                 style={{ flex: 1 }}
                                             />
-                                            <button
+
+                                            {/* 2025-01-11 김용록 : 주소버튼 위치 css 조정 */}
+                                            <div className="button_Address_div">
+                                                <button
                                                 type="button"
-                                                className="button navy"
+                                                className="button_Address blue"
                                                 onClick={handleAddressSearch}
                                                 style={{ marginLeft: "10px" }}
-                                            >
-                                                주소 검색
-                                            </button>
+                                                >
+                                                    주소 검색
+                                                </button>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -208,6 +237,15 @@ function SignUpForm() {
                         </button>
                     </div>
                 </form>
+            </div>
+
+            <div>
+
+                <iframe src="" className="w-3 h-3">
+
+                    지원하지 않는 브라우저입니다.
+                </iframe>
+            
             </div>
         </div>
     );
