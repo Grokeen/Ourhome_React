@@ -38,11 +38,11 @@
     &logoColor=white/"> -> 로고 컬러 설정
 ----------------------------------------------------------------- -->
 
-<img src="https://img.shields.io/badge/
+<a><img src="https://img.shields.io/badge/
 Java-ED8B00
 ?style=for-the-badge
 &logo=openjdk
-&logoColor=white/">
+&logoColor=white/"></a>
 <img src="https://img.shields.io/badge/
 Spring%20boot-6DB33F
 ?style=for-the-badge
