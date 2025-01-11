@@ -7,7 +7,7 @@ function InsAutoJoinForm() {
     const navigate = useNavigate();
 
     useEffect(() => {
-    
+
             if (!sessionStorage.getItem("jwtToken")) {
                 console.error("접근 권한이 없습니다.");
                 alert("로그인이 필요합니다.");
@@ -33,7 +33,8 @@ function InsAutoJoinForm() {
                 } catch (error) {
                     console.error("보험 가입 중 오류 발생:", error);
                     alert("서버와의 통신에 실패했습니다.");
-                    navigate("/join"); 
+
+                    navigate("/join");
                 }
             };
             alreadyJoin();
