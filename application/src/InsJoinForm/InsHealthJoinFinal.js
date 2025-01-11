@@ -178,6 +178,9 @@ function InsHealthJoinFinal() {
                         가입
                     </button>
 
+                    {/* 2025-01-11 김용록 : css에 button-group 정보 없어서 추가해야하는데, 귀찮아서 span으로 처리 */}
+                    <span class="left-10" > </span>
+                            
                     <button
                         type="button"
                         className="button navy"

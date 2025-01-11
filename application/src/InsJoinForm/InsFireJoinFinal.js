@@ -202,6 +202,8 @@ function InsFireJoinFinal() {
                         가입
                     </button>
 
+                    <span class="left-10;" > </span>
+                    
                     <button
                         type="button"
                         className="button navy"
