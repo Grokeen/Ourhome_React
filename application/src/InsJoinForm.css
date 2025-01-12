@@ -107,6 +107,10 @@
   padding: 10px 15px;
   border: 1px solid #e8e8e8;
   border-left: 0;
+
+  /* 2025-01-11 김용록 : 길이 좁다고 해서 추가 */
+  min-width: 500px;
+  width: auto;
 }
 .board-form table th:last-child,
 .board-form table td:last-child {
@@ -377,6 +381,14 @@ a.button.round {
   border-radius: 20px;
 }
 
+/* 2025-01-11 김용록 : 버튼 반만 눌린다는 부분 추가 */
+.button-group {
+
+  height: 70px;
+
+}
+
+
 /* button size */
 .button.small {
   height: 36px;
@@ -470,6 +482,154 @@ a.button.round {
   background-color: #fff;
 }
 .button.border.gray {
+  border-color: #ccc;
+  background-color: #fff;
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* 2025-01-11 김용록 : 주소 전용 버튼 설정 추가 */
+.button_Address,
+a.button_Address {
+  overflow: hidden;
+  display: inline-block;
+  height: 48px;
+  margin: 0;
+  padding: 0 25px;
+  color: #111;
+  font-size: 1.066em;
+  line-height: 46px;
+  cursor: pointer;
+  border: 1px solid #888;
+  border-radius: 4px;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: #fff;
+
+}
+.button_Address:hover,
+a.button_Address:hover {
+  color: #000;
+  border-color: #000;
+}
+.button_Address[disabled],
+.button_Address.disabled,
+a.button_Address.disabled {
+  cursor: default;
+  opacity: 1;
+  border-color: #ddd !important;
+  color: #888 !important;
+  cursor: default;
+  background-color: #f8f8f8 !important;
+}
+a.button_Address.round {
+  height: 40px;
+  line-height: 38px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+/* button_Address size */
+.button_Address.small {
+  height: 36px;
+  padding: 0 15px;
+  font-size: 0.933em;
+  line-height: 34px;
+}
+.button_Address.large {
+  height: 56px;
+  padding: 0 30px;
+  font-size: 1.2em;
+  line-height: 54px;
+  font-size: 1.2em;
+}
+
+/* button_Address 안에 아이콘 있을 때 */
+.button_Address.icon {
+  padding-left: 20px;
+}
+.button_Address.small.icon {
+  padding-left: 10px;
+}
+.button_Address.large.icon {
+  padding-left: 25px;
+}
+
+/* button_Address color */
+.button_Address.gray {
+  color: #fff;
+  border-color: #9da4b1;
+  background-color: #9da4b1;
+}
+.button_Address.gray:hover {
+  color: #fff;
+  border-color: #7d8595;
+  background-color: #7d8595;
+}
+.button_Address.blue {
+  color: #fff;
+  border-color: #0369d1;
+  background-color: #0369d1;
+}
+.button_Address.blue:hover {
+  color: #fff;
+  border-color: #0359b2;
+  background-color: #0359b2;
+}
+.button_Address.navy {
+  color: #fff;
+  border-color: #3a3b4a;
+  background-color: #3a3b4a;
+}
+.button_Address.navy:hover {
+  color: #fff;
+  border-color: #000;
+  background-color: #000;
+}
+.button_Address.white {
+  color: #333;
+  border: 0;
+  background-color: #fff;
+}
+.button_Address.green {
+  color: #fff;
+  border-color: #028a00;
+  background-color: #028a00;
+}
+.button_Address.green:hover {
+  color: #fff;
+  border-color: #057b03;
+  background-color: #057b03;
+}
+.button_Address.border {
+  color: #111;
+  border: 1px solid #888;
+  background-color: #fff;
+}
+.button_Address.border.white {
+  color: #fff;
+  border-color: #fff;
+  background-color: transparent;
+}
+.button_Address.border.blue {
+  color: #0369d1;
+  border-color: #0369d1;
+  background-color: #fff;
+}
+.button_Address.border.blue:hover {
+  color: #0359b2;
+  border-color: #0359b2;
+  background-color: #fff;
+}
+.button_Address.border.gray {
   border-color: #ccc;
   background-color: #fff;
 }

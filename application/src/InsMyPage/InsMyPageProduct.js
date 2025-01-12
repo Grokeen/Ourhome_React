@@ -3,8 +3,16 @@ import '../css/InsMyPage.css'
 import { Link,useNavigate } from 'react-router-dom'
 
 
-const InsMyPageMain = () => {
-    
+
+const InsMyPageProduct = () => {
+    const [content, setContent] = useState('');
+    useEffect(() => {
+        fetch('/InsSignUp.js') // JavaScript 파일 경로
+          .then(response => response.text())
+          .then(data => setContent(data));
+          
+    }, []);
+
     
 
     return (
@@ -25,11 +33,11 @@ const InsMyPageMain = () => {
               마이페이지<p>Site Information</p>
             </h2>
             <ul class='sub_nav_ul'>
-              <li class='on'>
-                <Link to={"/Ins_MyPageProduct"}  style={{ textDecoration: 'none' }} class="transition hover:bg-gray-100 rounded-full "  > 가입상품 </Link>
+               <li class='on'>
+                <Link to={"/Ins_MyPageProduct"}  style={{ textDecoration: 'none' }} class="transition hover:bg-gray-100 rounded-full ">가입상품</Link>
               </li>
               <li>
-                <Link to={"/Ins_MyPageRequest"}  style={{ textDecoration: 'none' }} class="transition hover:bg-gray-100 rounded-full "  >보험청구</Link>
+                <Link to={"/Ins_MyPageRequest"}  style={{ textDecoration: 'none' }} class="transition hover:bg-gray-100 rounded-full ">보험청구</Link>
               </li>
               <li>
 
@@ -50,7 +58,7 @@ const InsMyPageMain = () => {
           {/* 메인 콘텐츠 호출해서 비동기로 사용 */}
           <div class='sub_cont'>
               
-            <div className="main-prd-wrap">
+                <div className="main-prd-wrap">
                   <h4 className="navi-title">건강</h4>
                   <div className="list-prd-box">
                       <ul>
@@ -106,10 +114,11 @@ const InsMyPageMain = () => {
                       </ul>
                   </div>
               </div>
+  
           </div>
         </div>
       </div>
     )
 }   
 
-export default InsMyPageMain;
+export default InsMyPageProduct;

@@ -1,3 +1,4 @@
+import "../css/InsProductPage.css";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -44,11 +45,19 @@ const ProductDetail = () => {
     }, [type]);
 
     return (
-        <div className="wrap">
-            <div className="product-detail">
-                <h1 className="text-3xl">{product.title}</h1>
-                <p>{product.description}</p>
+        <div className="InsProductPage_wrap">
+        
+
+            <div className="InsProductPage_title">
+                <h1 >{product.title}</h1>
+                
             </div>
+            <div className="InsProductPage_content">
+
+                <p >{product.description}</p>
+            </div>
+                
+        
         </div>
     );
 };
