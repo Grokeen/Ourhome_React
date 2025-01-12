@@ -54,6 +54,11 @@ import InsAutoRequestForm from "./InsRequest/InsAutoRequestForm.js";
 
 // 보험 마이페이지
 import InsMyPageMain from "./InsMyPage/InsMyPageMain";
+import InsMyPageRequest from "./InsMyPage/InsMyPageRequest";
+import InsMyPageProduct from "./InsMyPage/InsMyPageProduct";
+import InsMyPageUserInfo from "./InsMyPage/InsMyPageUserInfo";
+
+
 //회원가입
 import InsSignUp from "./InsMyPage/InsSignUp.js"
 
@@ -106,6 +111,10 @@ function App() {
 
                   {/* 보험 마이페이지 */}
                   <Route path="Ins_MyPageMain" element={<InsMyPageMain />} /> 
+                  {/* 2025-01-11 김용록 : 마이페이지 항목 세개 추가 */}
+                  <Route path="Ins_MyPageRequest" element={<InsMyPageRequest />} /> 
+                  <Route path="Ins_MyPageProduct" element={<InsMyPageProduct />} /> 
+                  <Route path="Ins_MyPageUserInfo" element={<InsMyPageUserInfo />} /> 
 
                   {/* 보험 고객센터 */}
                   {/* <Route path="InsProductInfo" element={<InsProductInfo />} /> 

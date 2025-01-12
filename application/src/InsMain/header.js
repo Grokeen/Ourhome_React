@@ -243,12 +243,13 @@ const Header = () => {
 									<a 
 										id="logInButtonTop" 
 										onClick={loginOpen} 
-										className="w-10 hover:bg-slate-400"
+										className="w-10  hover:bg-slate-400"
 									>
 										로그인
 									</a>
 								)}
 
+								
 								{/* 로그아웃 버튼 */}
 								{isLoggedIn && (
 									<a 
@@ -259,6 +260,11 @@ const Header = () => {
 										로그아웃
 									</a>
 								)}
+
+
+								{/* 2025-01-11 김용록 : 로그인 회원가입 띄우기 */}
+								<a> </a>
+
 
 								{/* 회원가입 버튼 */}
 								{!isLoggedIn && (

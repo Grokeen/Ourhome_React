@@ -194,14 +194,18 @@ function InsFireJoinForm() {
                                                 disabled // 읽기 전용
                                                 style={{ flex: 1 }}
                                             />
-                                            <button
-                                                type="button"
-                                                className="button navy"
-                                                onClick={handleAddressSearch}
-                                                style={{ marginLeft: "10px" }}
-                                            >
-                                                주소 검색
-                                            </button>
+
+                                            {/* 2025-01-11 김용록 : 주소버튼 설정 변경 */}
+                                            <div className="button_Address_div">
+                                                <button
+                                                    type="button"
+                                                    className="button_Address blue"
+                                                    onClick={handleAddressSearch}
+                                                    style={{ marginLeft: "10px" }}
+                                                >
+                                                    주소 검색
+                                                </button>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
