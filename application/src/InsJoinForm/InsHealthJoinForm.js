@@ -108,40 +108,49 @@ function InsHealthJoinForm() {
                                 <col />
                             </colgroup>
                             <tbody>
-                                <tr>
-                                    <th>보험비를 지급받을 은행</th>
+                            <tr>
+                                    <th>은행</th>
                                     <td>
-                                        <input
-                                            name="bank"
-                                            type="text"
-                                            title="은행명 입력"
-                                            placeholder="보험비를 지급받을 은행명을 입력해주세요."
-                                            className="input-text"
-                                        />
+                                        <div style={{ display: "flex" }}>
+                                            <input
+                                                id="bank"
+                                                name="bank"
+                                                type="text"
+                                                title="은행명 입력"
+                                                placeholder="보험비 납부 은행 입력"
+                                                className="input-text"
+                                                style={{ flex: 1 }}
+                                            />
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>계좌번호</th>
                                     <td>
-                                        <input
-                                            name="account"
-                                            type="text"
-                                            title="계좌번호 입력"
-                                            placeholder="보험료를 지급받을 계좌번호를 입력해주세요."
-                                            className="input-text"
-                                        />
+                                        <div style={{ display: "flex" }}>
+                                            <input
+                                                id="account"
+                                                name="account"
+                                                type="text"
+                                                title="계좌번호 입력"
+                                                placeholder="보험료 납부 계좌번호 입력"
+                                                className="input-text"
+                                                style={{ flex: 1 }}
+                                            />
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>보험 가입 기간</th>
+                                    <th>가입기간</th>
                                     <td>
-                                        <input
-                                            name="duration"
-                                            type="number"
-                                            title="가입기간 입력"
-                                            placeholder="가입기간(년)"
-                                            className="input-text"
-                                        />
+                                            <input
+                                                id="duration"
+                                                name="duration"
+                                                type="number"
+                                                title="가입기간 입력"
+                                                placeholder="가입기간 입력(년)"
+                                                className="input-text"
+                                            />
                                     </td>
                                 </tr>
                                 <tr>
@@ -225,7 +234,7 @@ function InsHealthJoinForm() {
                                                 <input
                                                     type="text"
                                                     name="family"
-                                                    placeholder="기타 유전질환을 입력해주세요."
+                                                    placeholder="기타 유전질환 입력"
                                                     className="input-text"
                                                     style={{ marginTop: "10px", display: "block" }}
                                                 />
@@ -262,7 +271,7 @@ function InsHealthJoinForm() {
                                             {hasOtherPastDiseases && (
                                                 <input
                                                     type="text"
-                                                    placeholder="기타 병력을 입력해주세요."
+                                                    placeholder="기타 병력 입력"
                                                     name="pre_existing_conditions"
                                                     className="input-text"
                                                     style={{ marginTop: "10px", display: "block" }}

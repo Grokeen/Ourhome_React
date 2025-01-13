@@ -140,43 +140,49 @@ function InsFireJoinForm() {
                                 <col />
                             </colgroup>
                             <tbody>
-                                <tr>
+                            <tr>
                                     <th>은행</th>
                                     <td>
-                                        <input
-                                            id="bank"
-                                            name="bank"
-                                            type="text"
-                                            title="은행명 입력"
-                                            placeholder="계좌가 개설된 은행명을 입력해주세요."
-                                            className="input-text"
-                                        />
+                                        <div style={{ display: "flex" }}>
+                                            <input
+                                                id="bank"
+                                                name="bank"
+                                                type="text"
+                                                title="은행명 입력"
+                                                placeholder="보험비 납부 은행 입력"
+                                                className="input-text"
+                                                style={{ flex: 1 }}
+                                            />
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>계좌번호</th>
                                     <td>
-                                        <input
-                                            id="account"
-                                            name="account"
-                                            type="text"
-                                            title="계좌번호 입력"
-                                            placeholder="보험료 납부 계좌번호를 입력해주세요."
-                                            className="input-text"
-                                        />
+                                        <div style={{ display: "flex" }}>
+                                            <input
+                                                id="account"
+                                                name="account"
+                                                type="text"
+                                                title="계좌번호 입력"
+                                                placeholder="보험료 납부 계좌번호 입력"
+                                                className="input-text"
+                                                style={{ flex: 1 }}
+                                            />
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>가입기간</th>
                                     <td>
-                                        <input
-                                            id="duration"
-                                            name="duration"
-                                            type="number"
-                                            title="가입기간 입력"
-                                            placeholder="가입기간(년)"
-                                            className="input-text"
-                                        />
+                                            <input
+                                                id="duration"
+                                                name="duration"
+                                                type="number"
+                                                title="가입기간 입력"
+                                                placeholder="가입기간 입력(년)"
+                                                className="input-text"
+                                            />
                                     </td>
                                 </tr>
                                 <tr>
@@ -212,16 +218,19 @@ function InsFireJoinForm() {
                                 <tr>
                                     <th>상세 주소</th>
                                     <td>
-                                        <input
-                                            id="propertyDetailAddress"
-                                            name="propertyDetailAddress"
-                                            type="text"
-                                            title="상세 주소 입력"
-                                            placeholder="상세 주소를 입력해주세요."
-                                            className="input-text"
-                                            required
-                                            disabled={!isAddressSelected} // 주소 선택 후 활성화
-                                        />
+                                        <div style={{ display: "flex" }}>
+                                            <input
+                                                id="propertyDetailAddress"
+                                                name="propertyDetailAddress"
+                                                type="text"
+                                                title="상세 주소 입력"
+                                                placeholder="상세 주소를 입력해주세요."
+                                                className="input-text"
+                                                required
+                                                disabled={!isAddressSelected} // 주소 선택 후 활성화
+                                                style={{ flex: 1 }}
+                                            />
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -249,28 +258,28 @@ function InsFireJoinForm() {
                                                 기타
                                             </label>
                                             {hasOtherBuildingType && (
-                                                <input
-                                                    type="text"
-                                                    name="buildingTypeOther"
-                                                    placeholder="기타 유형을 입력해주세요."
-                                                    className="input-text"
-                                                    style={{ marginTop: "10px", display: "block" }}
-                                                />
+                                                    <input
+                                                        type="text"
+                                                        name="buildingTypeOther"
+                                                        placeholder="기타 유형 입력."
+                                                        className="input-text"
+                                                        style={{ marginTop: "10px", display: "block" }}
+                                                    />
                                             )}
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>건물 연식</th>
+                                    <th>건물 연식(년)</th>
                                     <td>
-                                        <input
-                                            id="buildingYear"
-                                            name="buildingYear"
-                                            type="number"
-                                            title="건물 연식 입력"
-                                            placeholder="건물이 지어진 연도를 입력해주세요."
-                                            className="input-text"
-                                        />
+                                            <input
+                                                id="buildingYear"
+                                                name="buildingYear"
+                                                type="number"
+                                                title="건물 연식 입력"
+                                                placeholder="건축 년도 입력"
+                                                className="input-text"
+                                            />
                                     </td>
                                 </tr>
                                 <tr>
@@ -289,14 +298,14 @@ function InsFireJoinForm() {
                                 <tr>
                                     <th>건물 내 평균 인원</th>
                                     <td>
-                                        <input
-                                            id="occupants"
-                                            name="occupants"
-                                            type="number"
-                                            title="평균 인원 입력"
-                                            placeholder="해당 건물에 평균적으로 몇 명이 거주하거나 상주하나요?"
-                                            className="input-text"
-                                        />
+                                            <input
+                                                id="occupants"
+                                                name="occupants"
+                                                type="number"
+                                                title="평균 인원 입력"
+                                                placeholder="평균 거주(상주) 인원 입력"
+                                                className="input-text"
+                                            />
                                     </td>
                                 </tr>
                             </tbody>

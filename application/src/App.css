@@ -313,6 +313,8 @@ td.tdPrice .cost1 {
   font-size: 16px;
 }
 
+
+
 /* ------------------------------------------------------------------------------------------------------------- */
 
 /* ------------------------------------------------------------------------------------------------------------- */
@@ -2134,24 +2136,51 @@ td.tdPrice .cost1 {
 }
 
 /* 2024-12-27 김용록 : 반응형 사이즈 변화 추가 */
+/* 2024-12-27 김용록: 반응형 스타일 및 페이지별 스타일링 */
 @media (max-width: 1920px) {
+  /* 공통 스타일 */
   .main-prd-wrap .list-prd-box ul li.list-prd a {
     transform: scale(1);
     -webkit-transform: scale(1);
     transition: 0.2s ease-in-out;
-    -webkit-transition: 0.2s ease-in-out;
     position: relative;
     display: block;
-    width: 377px;
-    height: 178px;
+    width: 1200px;
+    height: auto; /* 콘텐츠에 따라 높이가 늘어남 */
+    min-height: 178px; /* 최소 높이 설정 */
     padding: 28px;
     margin: 10px 0 16px;
     border-radius: 12px;
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
-    /* 좌로 밀기 */
-    left: 350px;
+    left: 350px; /* 좌측으로 이동 */
+  }
+
+  /* 특정 페이지 (마이페이지)에서의 스타일링 */
+  .mypage .main-prd-wrap .list-prd-box ul li.list-prd a {
+    width: 1000px;
+    left: 100px;
   }
 }
+
+/* 반응형 디자인 추가 */
+@media (max-width: 1280px) {
+  .main-prd-wrap .list-prd-box ul li.list-prd a {
+    width: 90%; /* 화면 너비의 90% */
+    left: 5%; /* 화면 중앙 정렬 */
+    min-height: 150px; /* 최소 높이 조정 */
+    padding: 20px; /* 패딩 축소 */
+  }
+}
+
+@media (max-width: 768px) {
+  .main-prd-wrap .list-prd-box ul li.list-prd a {
+    width: 100%; /* 전체 너비 */
+    left: 0; /* 좌측 여백 제거 */
+    min-height: 120px; /* 높이 축소 */
+    padding: 15px; /* 패딩 축소 */
+  }
+}
+
 @media (max-width: 1512px) {
   .main-prd-wrap .list-prd-box ul li.list-prd a {
     transform: scale(1);
@@ -2160,8 +2189,9 @@ td.tdPrice .cost1 {
     -webkit-transition: 0.2s ease-in-out;
     position: relative;
     display: block;
-    width: 377px;
-    height: 178px;
+    width: 1200px;
+    height: auto; /* 콘텐츠에 따라 높이가 늘어남 */
+    min-height: 178px; /* 최소 높이를 설정 */
     padding: 28px;
     margin: 10px 0 16px;
     border-radius: 12px;

@@ -5,9 +5,6 @@ import {useNavigate, useParams } from "react-router-dom";
 function InsHealthRequestForm() {
     const navigate = useNavigate();
     const { id } = useParams(); // URL에서 ID 가져오기
-    const [hasOtherGeneticDiseases, setHasOtherGeneticDiseases] = useState(false);
-    const [hasOtherPastDiseases, setHasOtherPastDiseases] = useState(false);
-
     // 로그인 상태 확인
     useEffect(() => {
         if (!sessionStorage.getItem("jwtToken")) {
@@ -122,19 +119,6 @@ function InsHealthRequestForm() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>청구 내용</th>
-                                    <td>
-                                        <input
-                                            name="content"
-                                            type="text"
-                                            title="청구 내용 입력"
-                                            placeholder="청구 내용을 입력해주세요."
-                                            required
-                                            className="input-text"
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
                                     <th>발생 비용</th>
                                     <td>
                                         <input
@@ -189,6 +173,29 @@ function InsHealthRequestForm() {
                                             required
                                             className="input-text"
                                         />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>청구 내용</th>
+                                    <td>
+                                        <div style={{ display: "flex" }}>
+                                            <textarea
+                                                name="content"
+                                                type="text"
+                                                title="청구 내용 입력"
+                                                placeholder="청구 내용을 입력해주세요."
+                                                required
+                                                className="input-textarea"
+                                                style={{
+                                                    flex: 1,
+                                                    padding: "8px 8px", /* 여백 */
+                                                    height: "200px", /* 높이 */
+                                                    resize: "none", /* 크기 조절 비활성화 */
+                                                    border: "1px solid #ccc", /* 테두리 스타일 */
+                                                    borderRadius: "4px" /* 모서리 둥글게 */
+                                                }}
+                                            />
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>

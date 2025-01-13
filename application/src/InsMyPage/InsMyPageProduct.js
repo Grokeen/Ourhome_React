@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../css/InsMyPage.css'
+import Sidebar from "./Sidebar";
 import { Link,useNavigate } from 'react-router-dom'
 
 
@@ -27,30 +28,8 @@ const InsMyPageProduct = () => {
 
         <div class='inner inner_hidden'>
 
-          {/* 좌측 카테고리 */}
-          <div class='left_nav' id='left_nav'>
-            <h2>
-              마이페이지<p>Site Information</p>
-            </h2>
-            <ul class='sub_nav_ul'>
-               <li class='on'>
-                <Link to={"/Ins_MyPageProduct"}  style={{ textDecoration: 'none' }} class="transition hover:bg-gray-100 rounded-full ">가입상품</Link>
-              </li>
-              <li>
-                <Link to={"/Ins_MyPageRequest"}  style={{ textDecoration: 'none' }} class="transition hover:bg-gray-100 rounded-full ">보험청구</Link>
-              </li>
-              <li>
-
-                <Link to={"/Ins_MyPageUserInfo"}  style={{ textDecoration: 'none' }} class="transition hover:bg-gray-100 rounded-full " >개인정보변경</Link>
-              </li>
-
-              <li>
-
-                <Link to={"/Ins_MyPageUserInfo"}  style={{ textDecoration: 'none' }} class="transition hover:bg-gray-100 rounded-full " >조환열자지3센치</Link>
-              </li>
-            </ul>
-
-          </div>
+          {/* 사이드바 */}
+          <Sidebar />
 
 
 

@@ -122,19 +122,6 @@ function InsFireRequestForm() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>청구 내용</th>
-                                    <td>
-                                        <input
-                                            name="content"
-                                            type="text"
-                                            title="청구 내용 입력"
-                                            placeholder="청구 내용을 입력해주세요."
-                                            required
-                                            className="input-text"
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
                                     <th>발생 비용</th>
                                     <td>
                                         <input
@@ -176,6 +163,29 @@ function InsFireRequestForm() {
                                             <option value="가재도구">가재도구</option>
                                             <option value="생명구조">생명구조</option>
                                         </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>청구 내용</th>
+                                    <td>
+                                        <div style={{ display: "flex" }}>
+                                            <textarea
+                                                name="content"
+                                                type="text"
+                                                title="청구 내용 입력"
+                                                placeholder="청구 내용을 입력해주세요."
+                                                required
+                                                className="input-textarea"
+                                                style={{
+                                                    flex: 1,
+                                                    padding: "8px 8px", /* 여백 */
+                                                    height: "200px", /* 높이 */
+                                                    resize: "none", /* 크기 조절 비활성화 */
+                                                    border: "1px solid #ccc", /* 테두리 스타일 */
+                                                    borderRadius: "4px" /* 모서리 둥글게 */
+                                                }}
+                                            />
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
