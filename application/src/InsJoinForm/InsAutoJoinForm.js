@@ -115,49 +115,46 @@ function InsAutoJoinForm() {
                                 <tr>
                                     <th>은행</th>
                                     <td>
-                                        <input
-                                            type="text"
-                                            name = "bank"
-                                            title="은행명 입력"
-                                            placeholder="보험비를 지급받을 은행명을 입력해주세요."
-                                            className="input-text"
-                                        />
+                                        <div style={{ display: "flex" }}>
+                                            <input
+                                                id="bank"
+                                                name="bank"
+                                                type="text"
+                                                title="은행명 입력"
+                                                placeholder="보험비 납부 은행 입력"
+                                                className="input-text"
+                                                style={{ flex: 1 }}
+                                            />
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>계좌번호</th>
                                     <td>
-                                        <input
-                                            type="text"
-                                            name = "account"
-                                            title="계좌번호 입력"
-                                            placeholder="보험료를 지급받을 계좌번호를 입력해주세요."
-                                            className="input-text"
-                                        />
+                                        <div style={{ display: "flex" }}>
+                                            <input
+                                                id="account"
+                                                name="account"
+                                                type="text"
+                                                title="계좌번호 입력"
+                                                placeholder="보험료 납부 계좌번호 입력"
+                                                className="input-text"
+                                                style={{ flex: 1 }}
+                                            />
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>가입기간</th>
                                     <td>
-                                        <input
-                                            type="number"
-                                            name = "duration"
-                                            title="가입기간 입력"
-                                            placeholder="가입기간(년)"
-                                            className="input-text"
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>차량번호</th>
-                                    <td>
-                                        <input
-                                            type="text"
-                                            name = "vehicleNumber"
-                                            title="차량번호 입력"
-                                            placeholder="보험 가입 차량의 차량번호를 입력해주세요."
-                                            className="input-text"
-                                        />
+                                            <input
+                                                id="duration"
+                                                name="duration"
+                                                type="number"
+                                                title="가입기간 입력"
+                                                placeholder="가입기간 입력(년)"
+                                                className="input-text"
+                                            />
                                     </td>
                                 </tr>
                                 <tr>
@@ -167,25 +164,38 @@ function InsAutoJoinForm() {
                                             type="text"
                                             name = "vehicleModel"
                                             title="차량 모델 입력"
-                                            placeholder="보험 가입 차량의 모델명을 입력해주세요."
+                                            placeholder="차량 모델 입력"
                                             className="input-text"
+                                            style={{ flex: 1 }}
                                         />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>차량번호</th>
+                                    <td>
+                                            <input
+                                                type="text"
+                                                name = "vehicleNumber"
+                                                title="차량번호 입력"
+                                                placeholder="차량번호 입력"
+                                                className="input-text"
+                                            />
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>차량 연식</th>
                                     <td>
-                                        <input
-                                            type="number"
-                                            name = "vehicleYear"
-                                            title="차량 연식 입력"
-                                            placeholder="보험 가입 차량이 제조된 연도를 입력해주세요."
-                                            className="input-text"
-                                        />
+                                            <input
+                                                type="number"
+                                                name = "vehicleYear"
+                                                title="차량 연식 입력"
+                                                placeholder="차량 제조 년도 입력"
+                                                className="input-text"
+                                            />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>운전 경력</th>
+                                    <th>운전 시작일</th>
                                     <td>
                                         <input
                                                 type="date"
@@ -214,7 +224,7 @@ function InsAutoJoinForm() {
                                             type="number"
                                             name = "monthlyMileage"
                                             title="평균 주행 거리 입력"
-                                            placeholder="한 달 평균 주행 거리 (km)"
+                                            placeholder="월 평균 주행 거리 (km)"
                                             className="input-text"
                                         />
                                     </td>
@@ -241,7 +251,7 @@ function InsAutoJoinForm() {
                                                 <input
                                                     type="text"
                                                     name="vehicleUsageOther"
-                                                    placeholder="기타 유형을 입력해주세요."
+                                                    placeholder="기타 유형 입력"
                                                     className="input-text"
                                                     style={{ marginTop: "10px", display: "block" }}
                                                     />

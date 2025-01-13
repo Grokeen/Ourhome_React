@@ -1,13 +1,12 @@
 import React, { useState,Component, useRef, useEffect } from 'react';
-import { Link, useLocation } from "react-router-dom";
-
-// import React, { Component } from "react";
+import { Link, useLocation , useNavigate} from "react-router-dom";
 
 
 const Header = () => {
 
 	//250108 조환열
 	const location = useLocation(); // 현재 경로 가져오기
+	const navigate = useNavigate();
 	
 
 	// -------------------------------------------------------------------------------
@@ -81,6 +80,8 @@ const Header = () => {
 			console.error("오류 발생:", error);
             alert("서버와의 통신에 실패했습니다.");
 		}
+
+		navigate("/");
 		
 	};
 
@@ -357,7 +358,7 @@ const Header = () => {
                         <li>
 							
 							
-							<Link to={"/Ins_MyPageMain"} class="transition hover:bg-gray-100 rounded-full "  style={{ textDecoration: 'none' }} onClick={() => hiddenLoginButton()} >마이페이지</Link>
+							<Link to={"/mypage/joined"} class="transition hover:bg-gray-100 rounded-full "  style={{ textDecoration: 'none' }} onClick={() => hiddenLoginButton()} >마이페이지</Link>
 						</li>
 
                    

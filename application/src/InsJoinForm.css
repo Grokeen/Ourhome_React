@@ -111,7 +111,9 @@
   /* 2025-01-11 김용록 : 길이 좁다고 해서 추가 */
   min-width: 500px;
   width: auto;
+  
 }
+
 .board-form table th:last-child,
 .board-form table td:last-child {
   border-right: 0;
@@ -633,3 +635,29 @@ a.button_Address.round {
   border-color: #ccc;
   background-color: #fff;
 }
+
+
+.tab-area {
+  position: relative; /* 기본 위치 설정 */
+  margin: 0 auto; /* 가로 가운데 정렬 */
+  padding: 0; /* 내부 여백 제거 */
+  width: 80%; /* 너비를 적절히 설정 (필요에 따라 조정) */
+  box-sizing: border-box; /* 패딩 포함 너비 계산 */
+}
+
+/*조환열 mypage */
+.mypage .tab-area {
+  position: relative; /* 기본 위치 설정 */
+  left: -200px; /* 불필요한 이동 초기화 */
+  margin: 0; /* 외부 여백 제거 */
+  padding: 0; /* 내부 여백 제거 */
+  width: calc(100% ); /* 사이드바를 제외한 너비 */
+  box-sizing: border-box; /* 패딩 포함 너비 계산 */
+}
+
+.mt30 {
+  position: relative;
+  left: -100px;
+}
+
+
