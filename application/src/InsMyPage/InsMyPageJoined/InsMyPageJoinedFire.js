@@ -8,7 +8,7 @@ function InsMypageJoinedFire() {
   const navigate = useNavigate();
   const [insuranceData, setInsuranceData] = useState(null);
 
-// 서버에서 데이터를 불러오기
+  // 서버에서 데이터를 불러오기
   useEffect(() => {
     if (!sessionStorage.getItem("jwtToken")) {
       console.error("접근 권한이 없습니다.");
@@ -34,9 +34,15 @@ function InsMypageJoinedFire() {
           const data = await response.json();
           setInsuranceData(data);
         } else {
-          const errorData = await response.json();
-          alert(errorData.message || "데이터를 불러오지 못했습니다.");
-          navigate("/mypage/joined"); // 에러 시 다른 페이지로 이동
+          if (response.status === 403) {
+            alert("세션이 만료되었습니다. 다시 로그인해주세요.");
+            sessionStorage.removeItem("jwtToken");
+            navigate("/");
+          } else {
+            const errorData = await response.json();
+            alert(errorData.message || "데이터를 불러오지 못했습니다.");
+            navigate("/mypage/joined"); // 에러 시 다른 페이지로 이동
+          }
         }
       } catch (error) {
         console.error("데이터 가져오기 중 오류:", error);
@@ -78,8 +84,14 @@ function InsMypageJoinedFire() {
           alert("가입이 해지되었습니다.");
           navigate("/mypage/joined");
         } else {
-          const errorData = await response.json();
-          alert(errorData.message || "취소 요청에 실패했습니다.");
+          if (response.status === 403) {
+            alert("세션이 만료되었습니다. 다시 로그인해주세요.");
+            sessionStorage.removeItem("jwtToken");
+            navigate("/");
+          } else {
+            const errorData = await response.json();
+            alert(errorData.message || "취소 요청에 실패했습니다.");
+          }
         }
       } else {
         alert("해지가 취소되었습니다.");
@@ -89,7 +101,6 @@ function InsMypageJoinedFire() {
       alert("서버와의 통신에 실패했습니다.");
     }
   };
-
 
   // 데이터 로딩 상태 처리
   if (!insuranceData) {
