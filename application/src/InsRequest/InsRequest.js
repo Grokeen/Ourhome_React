@@ -21,12 +21,18 @@ function InsRequest() {
           // 서버가 OK 응답을 보냈을 때만 이동
           navigate(url);
         } else {
-          const errorData = await response.json();
-          if (errorData.value) {
-            alert(errorData.message || "권한이 없습니다.");
-            navigate(url + "/" + errorData.value);
+          if (response.status === 403) {
+            alert("세션이 만료되었습니다. 다시 로그인해주세요.");
+            sessionStorage.removeItem("jwtToken");
+            navigate("/");
           } else {
-            alert(errorData.message || "권한이 없습니다.");
+            const errorData = await response.json();
+            if (errorData.value) {
+              alert(errorData.message || "권한이 없습니다.");
+              navigate(url + "/" + errorData.value);
+            } else {
+              alert(errorData.message || "권한이 없습니다.");
+            }
           }
         }
       } catch (error) {

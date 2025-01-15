@@ -59,13 +59,10 @@ import InsMyPageJoinedAuto from "./InsMyPage/InsMyPageJoined/InsMyPageJoinedAuto
 import InsMyPageJoinedHealth from "./InsMyPage/InsMyPageJoined/InsMyPageJoinedHealth.js";
 
 import InsMyPageRequested from "./InsMyPage/InsMyPageRequested/InsMyPageRequested.js";
+import InsMyPageRequestedDetail from "./InsMyPage/InsMyPageRequested/InsMyPageRequestedDetail.js";
 
 import InsMyPageTransaction from "./InsMyPage/InsMyPageTransaction/InsMyPageTransaction.js";
-
-import InsMyPageRequest from "./InsMyPage/InsMyPageRequest";
-import InsMyPageProduct from "./InsMyPage/InsMyPageProduct";
-import InsMyPageUserInfo from "./InsMyPage/InsMyPageUserInfo";
-
+import InsMyPageTransactionDetail from "./InsMyPage/InsMyPageTransaction/InsMyPageTransactionDetail.js";
 
 //회원가입
 import InsSignUp from "./InsMain/InsSignUp.js"
@@ -124,13 +121,9 @@ function App() {
                   <Route path="/mypage/joined/health/:id" element={<InsMyPageJoinedHealth />} />
 
                   <Route path="/mypage/requested" element={<InsMyPageRequested />} />
-
+                  <Route path="/mypage/requested/:id" element={<InsMyPageRequestedDetail />} />
                   <Route path="/mypage/transaction" element={<InsMyPageTransaction />} />
-
-                  {/* 2025-01-11 김용록 : 마이페이지 항목 세개 추가 */}
-                  <Route path="Ins_MyPageRequest" element={<InsMyPageRequest />} /> 
-                  <Route path="Ins_MyPageProduct" element={<InsMyPageProduct />} /> 
-                  <Route path="Ins_MyPageUserInfo" element={<InsMyPageUserInfo />} /> 
+                  <Route path="/mypage/transaction/:id" element={<InsMyPageTransactionDetail />} />
 
                   {/* 보험 고객센터 */}
                   {/* <Route path="InsProductInfo" element={<InsProductInfo />} /> 

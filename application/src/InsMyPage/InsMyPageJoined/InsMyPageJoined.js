@@ -28,10 +28,17 @@ const InsMyPageMain = () => {
         if (response.ok) {
           const data = await response.json();
           setInsuranceData(Array.isArray(data) ? data : [data]); // 데이터를 배열로 변환
-        } else {
-          const errorData = await response.json();
-          alert(errorData.message || "데이터를 불러오지 못했습니다.");
-          navigate("/mypage/joined"); // 에러 시 다른 페이지로 이동
+        } else {    
+          console.log(response.status);
+          if (response.status === 403) {
+            alert("세션이 만료되었습니다. 다시 로그인해주세요.");
+            sessionStorage.removeItem("jwtToken");
+            navigate("/");
+          } else {
+            const errorData = await response.json();
+            alert(errorData.message || "데이터를 불러오지 못했습니다.");
+            navigate("/mypage/joined");
+          }          
         }
       } catch (error) {
         console.error("데이터 가져오기 중 오류:", error);

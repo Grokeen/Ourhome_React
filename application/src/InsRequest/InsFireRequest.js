@@ -28,9 +28,15 @@ function InsFireRequest() {
           const data = await response.json();
           setInsuranceData(Array.isArray(data) ? data : [data]); // 데이터를 배열로 변환
         } else {
-          const errorData = await response.json();
-          alert(errorData.message || "데이터를 불러오지 못했습니다.");
-          navigate("/request"); // 에러 시 다른 페이지로 이동
+          if (response.status === 403) {
+            alert("세션이 만료되었습니다. 다시 로그인해주세요.");
+            sessionStorage.removeItem("jwtToken");
+            navigate("/");
+          } else {
+            const errorData = await response.json();
+            alert(errorData.message || "데이터를 불러오지 못했습니다.");
+            navigate("/request"); // 에러 시 다른 페이지로 이동
+          }
         }
       } catch (error) {
         console.error("데이터 가져오기 중 오류:", error);
@@ -56,12 +62,18 @@ function InsFireRequest() {
         if (response.ok) {
           navigate(url);
         } else {
-          const errorData = await response.json();
-          if (errorData.value) {
-            alert(errorData.message || "권한이 없습니다.");
-            navigate(`${url}/${errorData.value}`);
+          if (response.status === 403) {
+            alert("세션이 만료되었습니다. 다시 로그인해주세요.");
+            sessionStorage.removeItem("jwtToken");
+            navigate("/");
           } else {
-            alert(errorData.message || "권한이 없습니다.");
+            const errorData = await response.json();
+            if (errorData.value) {
+              alert(errorData.message || "권한이 없습니다.");
+              navigate(`${url}/${errorData.value}`);
+            } else {
+              alert(errorData.message || "권한이 없습니다.");
+            }
           }
         }
       } catch (error) {
@@ -111,20 +123,29 @@ function InsFireRequest() {
                   </p>
 
                   <p className="text">
-                    <span className="fc-blue">{"재산 주소 : "+ item.propertyAddress + " " + item.propertyDetailAddress}</span>
-                    <br />
-                  </p>
-                  <p className="text">
-                    <span className="fc-blue">{"공제율 : "+ item.deductibleRate + "%"}</span>
-                    <br />
-                  </p>
-                  <p className="text">
-                    <span className="fc-blue">{"한도 : "+item.coverageLimit+"원"}</span>
+                    <span className="fc-blue">
+                      {"재산 주소 : " +
+                        item.propertyAddress +
+                        " " +
+                        item.propertyDetailAddress}
+                    </span>
                     <br />
                   </p>
                   <p className="text">
                     <span className="fc-blue">
-                      {"보험가입일 : "+item.startDate + " ~ " + item.endDate}
+                      {"공제율 : " + item.deductibleRate + "%"}
+                    </span>
+                    <br />
+                  </p>
+                  <p className="text">
+                    <span className="fc-blue">
+                      {"한도 : " + item.coverageLimit + "원"}
+                    </span>
+                    <br />
+                  </p>
+                  <p className="text">
+                    <span className="fc-blue">
+                      {"보험가입일 : " + item.startDate + " ~ " + item.endDate}
                     </span>
                     <br />
                   </p>

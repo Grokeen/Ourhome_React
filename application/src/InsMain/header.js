@@ -69,13 +69,8 @@ const Header = () => {
 				},
 				body: JSON.stringify(),
 			});
-			if (response.ok) {
 				sessionStorage.removeItem("jwtToken");
 				setIsLoggedIn(false);
-			}
-			else{
-				alert("로그아웃에 실패하였습니다.");
-			}
 		}catch(error){
 			console.error("오류 발생:", error);
             alert("서버와의 통신에 실패했습니다.");
