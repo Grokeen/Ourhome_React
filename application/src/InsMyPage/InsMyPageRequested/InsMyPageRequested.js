@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../css/InsMyPage.css";
+import "../../css/paging.css";
 import Sidebar from "../Sidebar";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -128,21 +129,27 @@ const InsMyPageRequested = () => {
 
           {/* 페이지 네이션 */}
           <div className="pagination">
-            <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 0}
-            >
-              이전
-            </button>
-            <span>
-              {currentPage + 1} / {totalPages}
-            </span>
-            <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages - 1}
-            >
-              다음
-            </button>
+            <div  className="page-left">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 0}
+              >
+                이전
+              </button>
+            </div>
+            <div className="page-num">
+              <span >
+                {currentPage + 1} / {totalPages}
+              </span>
+            </div>
+            <div className="page-right">
+              <button
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages - 1} 
+              >
+                다음
+              </button>
+            </div>
           </div>
         </div>
       </div>

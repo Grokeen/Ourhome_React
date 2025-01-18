@@ -1,13 +1,13 @@
 import "../../InsJoinForm.css";
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import Sidebar from "../Sidebar";
 
 function InsMypageJoinedFire() {
-  const { id } = useParams(); // URL에서 ID 가져오기
-  const navigate = useNavigate();
-  const [insuranceData, setInsuranceData] = useState(null);
-
+    const { id } = useParams(); // URL에서 ID 가져오기
+    const navigate = useNavigate();
+    const [insuranceData, setInsuranceData] = useState(null);
+    const location = useLocation();
   // 서버에서 데이터를 불러오기
   useEffect(() => {
     if (!sessionStorage.getItem("jwtToken")) {
@@ -61,9 +61,8 @@ function InsMypageJoinedFire() {
 
   // 가입 정보 수정
   const update = async () => {
-    navigate("/join");
+    navigate(location.pathname+"/update");
   };
-
   // 가입 해지
   const cancel = async () => {
     try {

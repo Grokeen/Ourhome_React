@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import Sidebar from "../Sidebar";
 
-function InsMypageJoinedAuto() {
+function InsMypageRenewableAuto() {
   const { id } = useParams(); // URL에서 ID 가져오기
   const navigate = useNavigate();
   const [insuranceData, setInsuranceData] = useState(null);
@@ -21,7 +21,7 @@ function InsMypageJoinedAuto() {
     const fetchInsuranceData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/mypage/joined/" + id,
+          "http://localhost:8080/mypage/renewable/auto/" + id,
           {
             method: "GET",
             headers: {
@@ -42,13 +42,13 @@ function InsMypageJoinedAuto() {
           } else {
             const errorData = await response.json();
             alert(errorData.message || "데이터를 불러오지 못했습니다.");
-            navigate("/mypage/joined"); // 에러 시 다른 페이지로 이동
+            navigate("/mypage/renewable"); // 에러 시 다른 페이지로 이동
           }
         }
       } catch (error) {
         console.error("데이터 가져오기 중 오류:", error);
         alert("서버와의 통신에 실패했습니다.");
-        navigate("/mypage/joined");
+        navigate("/mypage/renewable");
       }
     };
 
@@ -63,44 +63,6 @@ function InsMypageJoinedAuto() {
   // 가입 정보 수정
   const update = async () => {
     navigate(location.pathname+"/update");
-  };
-
-  // 가입 해지
-  const cancel = async () => {
-    try {
-      const userConfirmed = window.confirm("정말로 해지하시겠습니까?");
-      if (userConfirmed) {
-        const response = await fetch(
-          "http://localhost:8080/mypage/joined/+" + id + "/cancel",
-          {
-            method: "PATCH",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: "Bearer " + sessionStorage.getItem("jwtToken"),
-            },
-          }
-        );
-
-        if (response.ok) {
-          alert("가입이 해지되었습니다.");
-          navigate("/mypage/joined");
-        } else {
-          if (response.status === 403) {
-            alert("세션이 만료되었습니다. 다시 로그인해주세요.");
-            sessionStorage.removeItem("jwtToken");
-            navigate("/");
-          } else {
-            const errorData = await response.json();
-            alert(errorData.message || "취소 요청에 실패했습니다.");
-          }
-        }
-      } else {
-        alert("해지가 취소되었습니다.");
-      }
-    } catch (error) {
-      console.error("취소 요청 중 오류 발생:", error);
-      alert("서버와의 통신에 실패했습니다.");
-    }
   };
 
   // 데이터 로딩 상태 처리
@@ -204,18 +166,6 @@ function InsMypageJoinedAuto() {
             >
               계좌 수정
             </button>
-
-            <span class="left-10;"> </span>
-
-            <button
-              type="button"
-              className="button navy"
-              onClick={() => {
-                cancel();
-              }}
-            >
-              보험 해지
-            </button>
           </div>
         </div>
       </div>
@@ -223,4 +173,4 @@ function InsMypageJoinedAuto() {
   );
 }
 
-export default InsMypageJoinedAuto;
+export default InsMypageRenewableAuto;

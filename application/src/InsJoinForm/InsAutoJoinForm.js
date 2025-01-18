@@ -59,7 +59,6 @@ function InsAutoJoinForm() {
       }
     }
 
-    console.log(formObject);
 
     try {
       const response = await fetch("http://localhost:8080/join/auto", {

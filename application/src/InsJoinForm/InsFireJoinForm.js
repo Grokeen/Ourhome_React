@@ -94,7 +94,6 @@ function InsFireJoinForm() {
       }
     }
 
-    console.log(formObject);
 
     try {
       const response = await fetch("http://localhost:8080/join/fire", {
@@ -156,15 +155,16 @@ function InsFireJoinForm() {
                 <tr>
                   <th>은행</th>
                   <td>
-                    <div style={{ display: "flex" }}>
+                     <div style={{ display: "flex" }}> 
+                    {/* <div >/ */}
                       <input
                         id="bank"
                         name="bank"
                         type="text"
                         title="은행명 입력"
                         placeholder="보험비 납부 은행 입력"
-                        className="input-text"
-                        style={{ flex: 1 }}
+                        // className="w-30 h-15"
+                        style={{ width: 400 }}
                       />
                     </div>
                   </td>

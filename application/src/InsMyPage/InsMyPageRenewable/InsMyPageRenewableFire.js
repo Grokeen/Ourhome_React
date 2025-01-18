@@ -3,12 +3,11 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import Sidebar from "../Sidebar";
 
-function InsMypageJoinedAuto() {
-  const { id } = useParams(); // URL에서 ID 가져오기
-  const navigate = useNavigate();
-  const [insuranceData, setInsuranceData] = useState(null);
-  const location = useLocation();
-
+function InsMypageJoinedFire() {
+    const { id } = useParams(); // URL에서 ID 가져오기
+    const navigate = useNavigate();
+    const [insuranceData, setInsuranceData] = useState(null);
+    const location = useLocation();
   // 서버에서 데이터를 불러오기
   useEffect(() => {
     if (!sessionStorage.getItem("jwtToken")) {
@@ -21,7 +20,7 @@ function InsMypageJoinedAuto() {
     const fetchInsuranceData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/mypage/joined/" + id,
+          "http://localhost:8080/mypage/renewable/fire/" + id,
           {
             method: "GET",
             headers: {
@@ -42,13 +41,13 @@ function InsMypageJoinedAuto() {
           } else {
             const errorData = await response.json();
             alert(errorData.message || "데이터를 불러오지 못했습니다.");
-            navigate("/mypage/joined"); // 에러 시 다른 페이지로 이동
+            navigate("/mypage/renewable"); // 에러 시 다른 페이지로 이동
           }
         }
       } catch (error) {
         console.error("데이터 가져오기 중 오류:", error);
         alert("서버와의 통신에 실패했습니다.");
-        navigate("/mypage/joined");
+        navigate("/mypage/renewable");
       }
     };
 
@@ -64,45 +63,7 @@ function InsMypageJoinedAuto() {
   const update = async () => {
     navigate(location.pathname+"/update");
   };
-
-  // 가입 해지
-  const cancel = async () => {
-    try {
-      const userConfirmed = window.confirm("정말로 해지하시겠습니까?");
-      if (userConfirmed) {
-        const response = await fetch(
-          "http://localhost:8080/mypage/joined/+" + id + "/cancel",
-          {
-            method: "PATCH",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: "Bearer " + sessionStorage.getItem("jwtToken"),
-            },
-          }
-        );
-
-        if (response.ok) {
-          alert("가입이 해지되었습니다.");
-          navigate("/mypage/joined");
-        } else {
-          if (response.status === 403) {
-            alert("세션이 만료되었습니다. 다시 로그인해주세요.");
-            sessionStorage.removeItem("jwtToken");
-            navigate("/");
-          } else {
-            const errorData = await response.json();
-            alert(errorData.message || "취소 요청에 실패했습니다.");
-          }
-        }
-      } else {
-        alert("해지가 취소되었습니다.");
-      }
-    } catch (error) {
-      console.error("취소 요청 중 오류 발생:", error);
-      alert("서버와의 통신에 실패했습니다.");
-    }
-  };
-
+ 
   // 데이터 로딩 상태 처리
   if (!insuranceData) {
     return <div>로딩 중...</div>;
@@ -168,20 +129,20 @@ function InsMypageJoinedAuto() {
                   </td>
                 </tr>
                 <tr>
-                  <th>차량 번호</th>
-                  <td>{insuranceData.vehicleNumber}</td>
+                  <th>재산 주소</th>
+                  <td>{insuranceData.propertyAddress}</td>
                 </tr>
                 <tr>
-                  <th>차량 모델</th>
-                  <td>{insuranceData.vehicleModel}</td>
+                  <th>상세 주소</th>
+                  <td>{insuranceData.propertyDetailAddress}</td>
                 </tr>
                 <tr>
-                  <th>차량 연식</th>
-                  <td>{insuranceData.vehicleYear}</td>
+                  <th>건물 유형</th>
+                  <td>{insuranceData.buildingType}</td>
                 </tr>
                 <tr>
-                  <th>차량 용도</th>
-                  <td>{insuranceData.vehicleUsage}</td>
+                  <th>건축 년도</th>
+                  <td>{insuranceData.buildingYear}</td>
                 </tr>
                 <tr>
                   <th>은행</th>
@@ -204,18 +165,6 @@ function InsMypageJoinedAuto() {
             >
               계좌 수정
             </button>
-
-            <span class="left-10;"> </span>
-
-            <button
-              type="button"
-              className="button navy"
-              onClick={() => {
-                cancel();
-              }}
-            >
-              보험 해지
-            </button>
           </div>
         </div>
       </div>
@@ -223,4 +172,4 @@ function InsMypageJoinedAuto() {
   );
 }
 
-export default InsMypageJoinedAuto;
+export default InsMypageJoinedFire;

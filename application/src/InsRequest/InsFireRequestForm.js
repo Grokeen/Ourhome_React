@@ -60,11 +60,11 @@ function InsFireRequestForm() {
 
     const formData = new FormData(e.target);
     const formObject = Object.fromEntries(formData.entries());
-
     console.log(formObject);
+
     try {
       const response = await fetch(
-        "http://localhost:8080/request/health/" + id,
+        "http://localhost:8080/request/fire/" + id,
         {
           method: "POST",
           headers: {

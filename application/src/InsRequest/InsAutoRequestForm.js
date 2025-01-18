@@ -61,7 +61,6 @@ function InsAutoRequestForm() {
     const formData = new FormData(e.target);
     const formObject = Object.fromEntries(formData.entries());
 
-    console.log(formObject);
     try {
       const response = await fetch("http://localhost:8080/request/auto/" + id, {
         method: "POST",

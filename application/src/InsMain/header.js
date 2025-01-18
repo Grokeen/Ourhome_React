@@ -114,8 +114,6 @@ const Header = () => {
 	//250106 조환열 async로 변경(await 사용)
     const login = async (id_val, passward_val) => {
 		try {
-			alert("id : " + id_val + " / pass : " + passward_val);
-	
 			documentNone();
 	
 			// 2025-01-11 김용록 : 프론트엔드 테스트용
@@ -151,7 +149,6 @@ const Header = () => {
 				// JWT 토큰 추출 및 저장
 				const token = data.token; // 서버에서 토큰을 JSON 형식으로 반환한다고 가정
 				handleLoginSuccess(token);
-				alert("로그인 성공!");
 
 				// 로그인 상태 업데이트
 				documentBlock();

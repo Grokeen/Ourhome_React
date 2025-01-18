@@ -54,6 +54,21 @@ function InsMyPageRequestedDetail() {
     fetchRequestData();
   }, [id, navigate]);
 
+  function formatDate(isoDate) {
+    const date = new Date(isoDate);
+
+    // 원하는 형식: YYYY년 MM월 DD일 HH시 mm분
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; // 0부터 시작하므로 +1
+    const day = date.getDate();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+
+    return `${year}년 ${month}월 ${day}일 ${hours}시 ${minutes}분`;
+  }
+
+
+
   // 데이터 로딩 상태 처리
   if (!requestData) {
     return <div>로딩 중...</div>;
@@ -102,15 +117,15 @@ function InsMyPageRequestedDetail() {
                 </tr>
                 <tr>
                   <th>요청시간</th>
-                  <td>{requestData.requestDate} </td>
+                  <td>{formatDate(requestData.requestDate)} </td>
                 </tr>
                 <tr>
                   <th>상태</th>
                   <td>{requestData.status}</td>
                 </tr>
                 <tr>
-                  <th>결과</th>
-                  <td>{requestData.status}</td>
+                  <th>검토결과</th>
+                  <td>{requestData.description || "검토 중 입니다."}</td>
                 </tr>
               </tbody>
             </table>
