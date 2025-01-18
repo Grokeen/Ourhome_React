@@ -42,6 +42,15 @@ const Sidebar = () => {
             지급내역
           </Link>
         </li>
+        <li className={isActive("/mypage/renewable")}>
+          <Link
+            to={"/mypage/renewable"}
+            style={{ textDecoration: "none" }}
+            className="transition hover:bg-gray-100 rounded-full"
+          >
+            보험정보갱신
+          </Link>
+        </li>
       </ul>
     </div>
   );

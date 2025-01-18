@@ -1,0 +1,31 @@
+
+
+
+-pagination{
+
+    position: relative;
+
+}
+
+.page-left{
+
+    position: relative;
+    right:295px;
+    bottom: 5px;
+
+
+}
+.page-num{
+
+    position: relative;
+    left:550px;
+
+}
+.page-right{
+    position: relative;
+    right:200px;
+    bottom : 55px;
+
+
+
+}

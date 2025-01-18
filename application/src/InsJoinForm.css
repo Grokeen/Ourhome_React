@@ -63,6 +63,7 @@
     /* border-top: 1px solid #3a3b4a; */
     left: 350px;
     position: relative;
+    
   }
 }
 @media (max-width: 1512px) {
@@ -113,6 +114,10 @@
   width: auto;
   
 }
+/* .board-form table td div input {
+
+  width : 300px
+} */
 
 .board-form table th:last-child,
 .board-form table td:last-child {
@@ -223,6 +228,9 @@
   margin: 0;
 }
 
+
+
+
 /* ------------------------------------------------------------------------------------------------------------- */
 
 /* ------------------------------------------------------------------------------------------------------------- */
@@ -324,6 +332,8 @@
         position: relative;
       }
 }
+
+
 
 
 

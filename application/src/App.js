@@ -57,12 +57,18 @@ import InsMyPageJoined from "./InsMyPage/InsMyPageJoined/InsMyPageJoined.js";
 import InsMyPageJoinedFire from "./InsMyPage/InsMyPageJoined/InsMyPageJoinedFire.js";
 import InsMyPageJoinedAuto from "./InsMyPage/InsMyPageJoined/InsMyPageJoinedAuto.js";
 import InsMyPageJoinedHealth from "./InsMyPage/InsMyPageJoined/InsMyPageJoinedHealth.js";
+import InsMyPageJoinedUpdate from "./InsMyPage/InsMyPageJoined/InsMyPageJoinedUpdate.js";
 
 import InsMyPageRequested from "./InsMyPage/InsMyPageRequested/InsMyPageRequested.js";
 import InsMyPageRequestedDetail from "./InsMyPage/InsMyPageRequested/InsMyPageRequestedDetail.js";
 
 import InsMyPageTransaction from "./InsMyPage/InsMyPageTransaction/InsMyPageTransaction.js";
 import InsMyPageTransactionDetail from "./InsMyPage/InsMyPageTransaction/InsMyPageTransactionDetail.js";
+
+import InsMyPageRenewable from "./InsMyPage/InsMyPageRenewable/InsMyPageRenewable.js";
+import InsMyPageRenewableFire from "./InsMyPage/InsMyPageRenewable/InsMyPageRenewableFire.js";
+import InsMyPageRenewableAuto from "./InsMyPage/InsMyPageRenewable/InsMyPageRenewableAuto.js";
+import InsMyPageRenewableHealth from "./InsMyPage/InsMyPageRenewable/InsMyPageRenewableHealth.js";
 
 //회원가입
 import InsSignUp from "./InsMain/InsSignUp.js"
@@ -119,11 +125,18 @@ function App() {
                   <Route path="/mypage/joined/fire/:id" element={<InsMyPageJoinedFire />} />
                   <Route path="/mypage/joined/auto/:id" element={<InsMyPageJoinedAuto />} />
                   <Route path="/mypage/joined/health/:id" element={<InsMyPageJoinedHealth />} />
+                  <Route path="/mypage/joined/:productName/:id/update" element={<InsMyPageJoinedUpdate />} />
 
                   <Route path="/mypage/requested" element={<InsMyPageRequested />} />
                   <Route path="/mypage/requested/:id" element={<InsMyPageRequestedDetail />} />
+
                   <Route path="/mypage/transaction" element={<InsMyPageTransaction />} />
                   <Route path="/mypage/transaction/:id" element={<InsMyPageTransactionDetail />} />
+
+                  <Route path="/mypage/renewable" element={<InsMyPageRenewable />} /> 
+                  <Route path="/mypage/renewable/fire/:id" element={<InsMyPageRenewableFire />} /> 
+                  <Route path="/mypage/renewable/auto/:id" element={<InsMyPageRenewableAuto />} /> 
+                  <Route path="/mypage/renewable/health/:id" element={<InsMyPageRenewableHealth />} /> 
 
                   {/* 보험 고객센터 */}
                   {/* <Route path="InsProductInfo" element={<InsProductInfo />} /> 
