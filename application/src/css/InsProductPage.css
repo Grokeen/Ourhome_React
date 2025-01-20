@@ -1,0 +1,45 @@
+
+  /* ------------------------------------------------------------------------------------------------------------- */
+  /* product page                                                                                                  */
+  /* ------------------------------------------------------------------------------------------------------------- */
+
+
+@media (max-width: 1920px) {
+    .InsProductPage_wrap {
+      /* 타이틀 설정 */
+      top : 250px;
+      margin-bottom: 15px;
+      /* font-size: 1.6em; */
+      color: #111;
+      left: 350px;
+      position: relative;
+      min-height: 500px;
+
+      width : 1000px;
+    }
+
+  }
+  @media (max-width: 1512px) {
+    .InsProductPage_wrap {
+      /* 타이틀 설정 */
+      top : 250px;
+      margin-bottom: 15px;
+      /* font-size: 1.6em; */
+      color: #111;
+      left: 200px;
+      position: relative;
+      min-height: 500px;
+    }
+
+  }
+  
+
+div.InsProductPage_title {
+    
+    font-size: 2.6em;
+}
+
+div.InsProductPage_content {
+    
+    font-size: 1.6em;
+}
