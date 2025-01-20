@@ -129,7 +129,7 @@ function InsHealthJoinForm() {
                         title="은행명 입력"
                         placeholder="보험비 납부 은행 입력"
                         className="input-text"
-                        style={{ flex: 1 }}
+                        style={{ width: 165 }}
                       />
                     </div>
                   </td>
@@ -145,13 +145,24 @@ function InsHealthJoinForm() {
                         title="계좌번호 입력"
                         placeholder="보험료 납부 계좌번호 입력"
                         className="input-text"
-                        style={{ flex: 1 }}
+                        style={{ width: 200 }}
+                        onChange={(e) => {
+                          const regex = /^[0-9]*$/; // 숫자만 허용
+                          if (regex.test(e.target.value)) {
+                            e.target.setCustomValidity(""); // 유효성 검사 초기화
+                          } else {
+                            e.target.setCustomValidity(
+                              "숫자만 입력 가능합니다."
+                            ); // 오류 메시지
+                          }
+                          e.target.reportValidity(); // 메시지 표시
+                        }}
                       />
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <th>가입기간</th>
+                <th>가입기간</th>
                   <td>
                     <input
                       id="duration"
@@ -160,6 +171,8 @@ function InsHealthJoinForm() {
                       title="가입기간 입력"
                       placeholder="가입기간 입력(년)"
                       className="input-text"
+                      style={{ width: 150 }}
+                      min="1" // 0 이상의 값만 입력 가능
                     />
                   </td>
                 </tr>

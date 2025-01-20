@@ -108,7 +108,10 @@ function InsAutoRequestForm() {
       <div className="tab-area mt30">
         <div id="usGdcInfo02"></div>
         <div className="title-wrap">
-          <p className="title-3">건강보험 청구</p>
+          <p className="title-3">자동차보험 청구</p>
+          <p className="req-info">
+          <span style={{ color: "red" }}>*</span> 는 필수 입력 항목입니다.
+          </p>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="board-form">
@@ -119,32 +122,38 @@ function InsAutoRequestForm() {
               </colgroup>
               <tbody>
                 <tr>
-                  <th>사고 발생 날짜</th>
+                  <th>
+                    사고 발생 날짜<span style={{ color: "red" }}>*</span>
+                  </th>
                   <td>
                     <input
                       name="date"
                       type="date"
                       title="사고 발생 날짜 입력"
+                      min="1970-01-01"
+                      max={new Date().toISOString().split("T")[0]}
                       required
                       className="input-text"
                     />
                   </td>
                 </tr>
                 <tr>
-                  <th>발생 비용</th>
+                  <th>발생 비용<span style={{ color: "red" }}>*</span></th>
                   <td>
                     <input
                       name="price"
                       type="number"
                       title="비용 입력"
-                      placeholder="발생 비용을 입력해주세요."
+                      placeholder="발생 비용 입력(원)"
                       required
                       className="input-text"
+                      min="0"
+                      style={{ width: 150 }}
                     />
                   </td>
                 </tr>
                 <tr>
-                  <th>영수증 첨부</th>
+                  <th>영수증 첨부<span style={{ color: "red" }}>*</span></th>
                   <td>
                     <input
                       name="receiptImages"
@@ -158,10 +167,10 @@ function InsAutoRequestForm() {
                   </td>
                 </tr>
                 <tr>
-                  <th>손해 유형</th>
+                  <th>손해 유형<span style={{ color: "red" }}>*</span></th>
                   <td>
                     <select
-                      name="claimType"
+                      name="damageType"
                       required
                       className="input-select"
                       title="손해 유형 선택"
@@ -174,21 +183,24 @@ function InsAutoRequestForm() {
                   </td>
                 </tr>
                 <tr>
-                  <th>사고 발생 장소</th>
+                  <th>사고 발생 장소<span style={{ color: "red" }}>*</span></th>
                   <td>
-                    <input
-                      name="content"
-                      type="text"
-                      title="청구 내용 입력"
-                      placeholder="청구 내용을 입력해주세요."
-                      required
-                      className="input-text"
-                    />
+                    <div style={{ display: "flex" }}>
+                      <input
+                        name="content"
+                        type="text"
+                        title="청구 내용 입력"
+                        placeholder="발생 장소 입력"
+                        required
+                        className="input-text"
+                        style={{ flex: 1 }}
+                      />
+                    </div>
                   </td>
                 </tr>
 
                 <tr>
-                  <th>청구 내용</th>
+                  <th>청구 내용<span style={{ color: "red" }}>*</span></th>
                   <td>
                     <div style={{ display: "flex" }}>
                       <textarea
@@ -242,7 +254,7 @@ function InsAutoRequestForm() {
           </div>
           <div className="button-group mt30">
             <button type="submit" className="button navy" id="btnSubmit">
-              다음
+              신청하기
             </button>
           </div>
         </form>

@@ -91,45 +91,51 @@ const InsMyPageRequested = () => {
 
         <div className="sub_wrap">
           <div className="main-prd-wrap">
-            {requestData.map((item, index) => (
-              <div className="list-prd-box" key={index}>
-                <ul>
-                  <li className="list-prd">
-                    <Link
-                      to="#"
-                      className="splunk_mainProduct mainProduct dental"
-                      style={{ textDecoration: "none" }}
-                      onClick={(e) => {
-                        e.preventDefault(); // 기본 이동 방지
-                        navigate("/mypage/requested/" + item.requestId); // 적절한 경로 설정
-                      }}
-                    >
-                      <p className="title">
-                        <strong>{item.productTitle || "보험"}</strong>
-                      </p>
-                      <p className="text">
-                        <span className="fc-blue">
-                          {"청구일 : " + formatDate(item.requestDate)}
-                        </span>
-                        <br />
-                      </p>
-                      <p className="text">
-                        <span className="fc-blue">
-                          {"상태 : " + item.status}
-                        </span>
-                        <br />
-                      </p>
-                      <p className="text-sub"></p>
-                    </Link>
-                  </li>
-                </ul>
+            {requestData.length > 0 ? (
+              requestData.map((item, index) => (
+                <div className="list-prd-box" key={index}>
+                  <ul>
+                    <li className="list-prd">
+                      <Link
+                        to="#"
+                        className="splunk_mainProduct mainProduct dental"
+                        style={{ textDecoration: "none" }}
+                        onClick={(e) => {
+                          e.preventDefault(); // 기본 이동 방지
+                          navigate("/mypage/requested/" + item.requestId); // 적절한 경로 설정
+                        }}
+                      >
+                        <p className="title">
+                          <strong>{item.productTitle || "보험"}</strong>
+                        </p>
+                        <p className="text">
+                          <span className="fc-blue">
+                            {"청구일 : " + formatDate(item.requestDate)}
+                          </span>
+                          <br />
+                        </p>
+                        <p className="text">
+                          <span className="fc-blue">
+                            {"상태 : " + item.status}
+                          </span>
+                          <br />
+                        </p>
+                        <p className="text-sub"></p>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              ))
+            ) : (
+              <div className="no-data">
+                <p className="no-data-message">청구 내역이 없습니다.</p>
               </div>
-            ))}
+            )}
           </div>
 
           {/* 페이지 네이션 */}
           <div className="pagination">
-            <div  className="page-left">
+            <div className="page-left">
               <button
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 0}
@@ -138,14 +144,14 @@ const InsMyPageRequested = () => {
               </button>
             </div>
             <div className="page-num">
-              <span >
+              <span>
                 {currentPage + 1} / {totalPages}
               </span>
             </div>
             <div className="page-right">
               <button
                 onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages - 1} 
+                disabled={currentPage === totalPages - 1}
               >
                 다음
               </button>

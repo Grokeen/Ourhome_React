@@ -108,18 +108,19 @@ function InsMyPageJoinedUpdateForm() {
                 <col />
               </colgroup>
               <tbody>
-                <tr>
+              <tr>
                   <th>은행</th>
                   <td>
                     <div style={{ display: "flex" }}>
+                      {/* <div >/ */}
                       <input
                         id="bank"
                         name="bank"
                         type="text"
                         title="은행명 입력"
                         placeholder="보험비 납부 은행 입력"
-                        className="input-text"
-                        style={{ flex: 1 }}
+                        // className="w-30 h-15"
+                        style={{ width: 165 }}
                       />
                     </div>
                   </td>
@@ -135,7 +136,18 @@ function InsMyPageJoinedUpdateForm() {
                         title="계좌번호 입력"
                         placeholder="보험료 납부 계좌번호 입력"
                         className="input-text"
-                        style={{ flex: 1 }}
+                        style={{ width: 200 }}
+                        onChange={(e) => {
+                          const regex = /^[0-9]*$/; // 숫자만 허용
+                          if (regex.test(e.target.value)) {
+                            e.target.setCustomValidity(""); // 유효성 검사 초기화
+                          } else {
+                            e.target.setCustomValidity(
+                              "숫자만 입력 가능합니다."
+                            ); // 오류 메시지
+                          }
+                          e.target.reportValidity(); // 메시지 표시
+                        }}
                       />
                     </div>
                   </td>

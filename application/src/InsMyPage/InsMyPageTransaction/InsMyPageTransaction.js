@@ -89,40 +89,46 @@ const InsMyPageTransaction = () => {
         {/* 보험 상품 리스트 */}
         <div className="sub_wrap">
           <div className="main-prd-wrap">
-            {insuranceData.map((item, index) => (
-              <div className="list-prd-box" key={index}>
-                <ul>
-                  <li className="list-prd">
-                    <Link
-                      to="#"
-                      className="splunk_mainProduct mainProduct dental"
-                      style={{ textDecoration: "none" }}
-                      onClick={(e) => {
-                        e.preventDefault(); // 기본 이동 방지
-                        navigate("/mypage/transaction/" + item.transactionId); // 적절한 경로 설정
-                      }}
-                    >
-                      <p className="title">
-                        <strong>{item.productTitle || "보험"}</strong>
-                      </p>
-                      <p className="text">
-                        <span className="fc-blue">
-                          {"지급일 : " + formatDate(item.dateTime)}
-                        </span>
-                        <br />
-                      </p>
-                      <p className="text">
-                        <span className="fc-blue">
-                          {"상태 : " + item.status}
-                        </span>
-                        <br />
-                      </p>
-                      <p className="text-sub"></p>
-                    </Link>
-                  </li>
-                </ul>
+            {insuranceData.length > 0 ? (
+              insuranceData.map((item, index) => (
+                <div className="list-prd-box" key={index}>
+                  <ul>
+                    <li className="list-prd">
+                      <Link
+                        to="#"
+                        className="splunk_mainProduct mainProduct dental"
+                        style={{ textDecoration: "none" }}
+                        onClick={(e) => {
+                          e.preventDefault(); // 기본 이동 방지
+                          navigate("/mypage/transaction/" + item.transactionId); // 적절한 경로 설정
+                        }}
+                      >
+                        <p className="title">
+                          <strong>{item.productTitle || "보험"}</strong>
+                        </p>
+                        <p className="text">
+                          <span className="fc-blue">
+                            {"지급일 : " + formatDate(item.dateTime)}
+                          </span>
+                          <br />
+                        </p>
+                        <p className="text">
+                          <span className="fc-blue">
+                            {"상태 : " + item.status}
+                          </span>
+                          <br />
+                        </p>
+                        <p className="text-sub"></p>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              ))
+            ) : (
+              <div className="no-data">
+                <p className="no-data-message">지급 내역이 없습니다.</p>
               </div>
-            ))}
+            )}
           </div>
           {/* 페이지 네이션 */}
           <div className="pagination">
