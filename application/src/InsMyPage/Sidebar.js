@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
+
+//마이페이지 사이드바
 const Sidebar = () => {
   const location = useLocation(); // 현재 경로를 가져옴
 

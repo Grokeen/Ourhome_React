@@ -2,6 +2,7 @@ import React, { useState,Component, useRef, useEffect } from 'react';
 import { Link, useLocation , useNavigate} from "react-router-dom";
 
 
+//헤더
 const Header = () => {
 
 	//250108 조환열

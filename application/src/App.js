@@ -17,7 +17,7 @@ import InsFooter from "./InsMain/footer";
 
 // 보험 상품 정보
 import InsSelectProduct from "./InsProductInfo/InsSelectProduct";
-//250108 조환열 보험상세
+//250108 조환열 보험상세페이지
 import InsProductPage from "./InsProductInfo/InsProductPage.js";
 
 

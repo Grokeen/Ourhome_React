@@ -28,7 +28,7 @@ const ProductDetail = () => {
                 });
             } else {
                 const errorData = await response.json();
-                alert("조회 실패: " + errorData.message);
+                alert("조회 실패: " + errorData.message||"상품이 없습니다.");
             }
         } catch (error) {
             console.error("상품 정보 조회 중 오류 발생:", error);
