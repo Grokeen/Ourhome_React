@@ -119,32 +119,36 @@ function InsHealthRequestForm() {
               </colgroup>
               <tbody>
                 <tr>
-                  <th>비용 날짜</th>
+                  <th>비용 날짜<span style={{ color: "red" }}>*</span></th>
                   <td>
                     <input
                       name="date"
                       type="date"
                       title="비용 날짜 입력"
+                      min="1970-01-01"
+                      max={new Date().toISOString().split("T")[0]}
                       required
                       className="input-text"
                     />
                   </td>
                 </tr>
                 <tr>
-                  <th>발생 비용</th>
+                  <th>발생 비용<span style={{ color: "red" }}>*</span></th>
                   <td>
                     <input
                       name="price"
                       type="number"
                       title="비용 입력"
-                      placeholder="발생 비용을 입력해주세요."
+                      placeholder="발생 비용 입력(원)"
                       required
                       className="input-text"
+                      min="0"
+                      style={{ width: 150 }}
                     />
                   </td>
                 </tr>
                 <tr>
-                  <th>영수증 첨부</th>
+                  <th>영수증 첨부<span style={{ color: "red" }}>*</span></th>
                   <td>
                     <input
                       name="receiptImages"
@@ -158,7 +162,7 @@ function InsHealthRequestForm() {
                   </td>
                 </tr>
                 <tr>
-                  <th>청구 유형</th>
+                  <th>청구 유형<span style={{ color: "red" }}>*</span></th>
                   <td>
                     <select
                       name="claimType"
@@ -175,7 +179,7 @@ function InsHealthRequestForm() {
                   </td>
                 </tr>
                 <tr>
-                  <th>병원명</th>
+                  <th>병원명<span style={{ color: "red" }}>*</span></th>
                   <td>
                     <input
                       name="hospitalName"
@@ -188,7 +192,7 @@ function InsHealthRequestForm() {
                   </td>
                 </tr>
                 <tr>
-                  <th>청구 내용</th>
+                  <th>청구 내용<span style={{ color: "red" }}>*</span></th>
                   <td>
                     <div style={{ display: "flex" }}>
                       <textarea

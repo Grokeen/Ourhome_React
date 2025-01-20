@@ -27,14 +27,20 @@
     left: 350px;
     position: relative;
   }
+  .title-wrap {
+    position: relative; /* 부모 컨테이너 기준 */
+    display: flex; /* 플렉스 정렬 */
+    justify-content: space-between; /* 제목과 req-info를 양쪽 끝으로 정렬 */
+    align-items: center; /* 세로축 정렬 */
+  }
   .title-wrap .req-info {
-    float: right;
-    right: 450px;
-    position: relative;
+    left: -400px; /* 오른쪽 간격 조정 */
+    position: relative; /* 혹은 absolute로 변경 가능 */
     padding: 0;
     line-height: 36px;
   }
 }
+
 @media (max-width: 1512px) {
   .title-3 {
     /* 타이틀 설정 */

@@ -59,7 +59,6 @@ function InsAutoJoinForm() {
       }
     }
 
-
     try {
       const response = await fetch("http://localhost:8080/join/auto", {
         method: "POST",
@@ -129,7 +128,7 @@ function InsAutoJoinForm() {
                         title="은행명 입력"
                         placeholder="보험비 납부 은행 입력"
                         className="input-text"
-                        style={{ flex: 1 }}
+                        style={{ width: 165 }}
                       />
                     </div>
                   </td>
@@ -145,7 +144,18 @@ function InsAutoJoinForm() {
                         title="계좌번호 입력"
                         placeholder="보험료 납부 계좌번호 입력"
                         className="input-text"
-                        style={{ flex: 1 }}
+                        style={{ width: 200 }}
+                        onChange={(e) => {
+                          const regex = /^[0-9]*$/; // 숫자만 허용
+                          if (regex.test(e.target.value)) {
+                            e.target.setCustomValidity(""); // 유효성 검사 초기화
+                          } else {
+                            e.target.setCustomValidity(
+                              "숫자만 입력 가능합니다."
+                            ); // 오류 메시지
+                          }
+                          e.target.reportValidity(); // 메시지 표시
+                        }}
                       />
                     </div>
                   </td>
@@ -160,6 +170,8 @@ function InsAutoJoinForm() {
                       title="가입기간 입력"
                       placeholder="가입기간 입력(년)"
                       className="input-text"
+                      style={{ width: 150 }}
+                      min="1" // 0 이상의 값만 입력 가능
                     />
                   </td>
                 </tr>
@@ -172,7 +184,7 @@ function InsAutoJoinForm() {
                       title="차량 모델 입력"
                       placeholder="차량 모델 입력"
                       className="input-text"
-                      style={{ flex: 1 }}
+                      style={{ width: 120 }}
                     />
                   </td>
                 </tr>
@@ -185,6 +197,21 @@ function InsAutoJoinForm() {
                       title="차량번호 입력"
                       placeholder="차량번호 입력"
                       className="input-text"
+                      style={{ width: 120 }}
+                      onChange={(e) => {
+                        const value = e.target.value.replace(/\s/g, ""); // 띄어쓰기 제거
+                        const regex = /^[0-9]{2,3}[가-힣]{1}[0-9]{4}$/; // 차량번호 형식: 숫자-한글-숫자
+                        e.target.value = value; // 입력 값 업데이트
+
+                        if (regex.test(value)) {
+                          e.target.setCustomValidity(""); // 유효성 오류 제거
+                        } else {
+                          e.target.setCustomValidity(
+                            "형식: 숫자(2~3자리)-한글1자-숫자4자리"
+                          );
+                        }
+                        e.target.reportValidity(); // 오류 메시지 표시
+                      }}
                     />
                   </td>
                 </tr>
@@ -197,13 +224,22 @@ function InsAutoJoinForm() {
                       title="차량 연식 입력"
                       placeholder="차량 제조 년도 입력"
                       className="input-text"
+                      min="1970" // 최소 연도
+                      max={new Date().getFullYear()} // 현재 연도
+                      style={{ width: 130 }}
                     />
                   </td>
                 </tr>
                 <tr>
                   <th>운전 시작일</th>
                   <td>
-                    <input type="date" name="drivingStartDate" required />
+                    <input
+                      type="date"
+                      name="drivingStartDate"
+                      required
+                      min="1970-01-01"
+                      max={new Date().toISOString().split("T")[0]}
+                    />
                   </td>
                 </tr>
                 <tr>
@@ -238,6 +274,7 @@ function InsAutoJoinForm() {
                       title="평균 주행 거리 입력"
                       placeholder="월 평균 주행 거리 (km)"
                       className="input-text"
+                      min = "1"
                     />
                   </td>
                 </tr>

@@ -94,7 +94,6 @@ function InsFireJoinForm() {
       }
     }
 
-
     try {
       const response = await fetch("http://localhost:8080/join/fire", {
         method: "POST",
@@ -155,8 +154,8 @@ function InsFireJoinForm() {
                 <tr>
                   <th>은행</th>
                   <td>
-                     <div style={{ display: "flex" }}> 
-                    {/* <div >/ */}
+                    <div style={{ display: "flex" }}>
+                      {/* <div >/ */}
                       <input
                         id="bank"
                         name="bank"
@@ -164,7 +163,7 @@ function InsFireJoinForm() {
                         title="은행명 입력"
                         placeholder="보험비 납부 은행 입력"
                         // className="w-30 h-15"
-                        style={{ width: 400 }}
+                        style={{ width: 165 }}
                       />
                     </div>
                   </td>
@@ -180,7 +179,18 @@ function InsFireJoinForm() {
                         title="계좌번호 입력"
                         placeholder="보험료 납부 계좌번호 입력"
                         className="input-text"
-                        style={{ flex: 1 }}
+                        style={{ width: 200 }}
+                        onChange={(e) => {
+                          const regex = /^[0-9]*$/; // 숫자만 허용
+                          if (regex.test(e.target.value)) {
+                            e.target.setCustomValidity(""); // 유효성 검사 초기화
+                          } else {
+                            e.target.setCustomValidity(
+                              "숫자만 입력 가능합니다."
+                            ); // 오류 메시지
+                          }
+                          e.target.reportValidity(); // 메시지 표시
+                        }}
                       />
                     </div>
                   </td>
@@ -195,6 +205,8 @@ function InsFireJoinForm() {
                       title="가입기간 입력"
                       placeholder="가입기간 입력(년)"
                       className="input-text"
+                      style={{ width: 150 }}
+                      min="1" // 0 이상의 값만 입력 가능
                     />
                   </td>
                 </tr>
@@ -308,6 +320,9 @@ function InsFireJoinForm() {
                       title="건물 연식 입력"
                       placeholder="건축 년도 입력"
                       className="input-text"
+                      min="1970" // 최소 연도
+                      max={new Date().getFullYear()} // 현재 연도
+                      style={{ width: 120 }}
                     />
                   </td>
                 </tr>
@@ -336,6 +351,8 @@ function InsFireJoinForm() {
                       title="평균 인원 입력"
                       placeholder="평균 거주(상주) 인원 입력"
                       className="input-text"
+                      style={{ width: 200 }}
+                      min = "1"
                     />
                   </td>
                 </tr>

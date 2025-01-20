@@ -159,6 +159,7 @@ function InsMyPageJoinedUpdateForm() {
                         type="number"
                         title="평균 인원 입력"
                         placeholder="평균 거주(상주) 인원 입력"
+                        min = "1"
                         className="input-text"
                       />
                     </td>

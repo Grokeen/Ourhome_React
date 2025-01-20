@@ -153,6 +153,7 @@ function InsMyPageJoinedUpdateForm() {
                         name="monthlyMileage"
                         title="평균 주행 거리 입력"
                         placeholder="월 평균 주행 거리 (km)"
+                        min = "0"
                         className="input-text"
                       />
                     </td>
