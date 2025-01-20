@@ -169,28 +169,12 @@
 ----
 # 5. 개발자
 > 백엔드 / 프론트엔드
--
-    [
-        <img tooltip="사진 올리는 방법" src="https://i.namu.wiki/i/yCSBteCECL2SctkOahc3ejasIXzCK0x1Ichu-xvcrTmaSdOfVfIr0yQx1BY5ww_0lMNwaZUcy2hJkW7sL4uuhYPtPX8ggs8wmAo6jvo17tfnhEaT1geQXl2hBaS8q1Hlzfc-1hDDRgqB3LlUce6_ig.webp" width="70px" /> <strong style="color:hotpink; font-size:24px;">조</strong><strong style="color:white; font-size:15px;">게이</strong>
-    ](https://github.com/chohwanyeol)
+- 조환열
 
-
-
-
-> 키 작음 / 모태솔로
--
-    [
-        <img tooltip="사진 올리는 방법" src="https://w7.pngwing.com/pngs/827/887/png-transparent-snow-white-doc-seven-dwarfs-snow-white-dopey-grumpy-sneezy-seven-dwarfs-food-hand-elf.png" width="70px" /> <strong style="color:puple; font-size:24px; ">김</strong><strong style="color:white; font-size:15px;">호빗</strong>
-    ](https://github.com/rladudals1201)
 
 
 > 웹디자인 / 프론트엔드
--
-    [
-        <img tooltip="사진 올리는 방법" src="https://img.insight.co.kr/static/2018/03/03/700/48s441jefo18m58v7r1u.jpg" width="70px" /> <strong style="color:green; font-size:24px; ">바</strong><strong style="color:white; font-size:15px;">늘눈</strong>
-    ](https://github.com/Grokeen)
-
-
+- 김용록
 
 
 
